@@ -1,14 +1,14 @@
 {
-  "name": "new-react",
+  "name": "resistor-decoder",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app to calculate the resistance of a resistor based on its colored bands.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --watch",
     "dev": "webpack-dev-server --content-base ./site"
   },
-  "author": "",
+  "author": "Jessa Wright",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.20.0",

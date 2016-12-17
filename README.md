@@ -1,12 +1,15 @@
-# New react
+# Resistor Decoder
 
-## How this came about
-After struggling to get started with React do to the unnecessarily complicated tooling front-loaded on most of the more comprehensive React tutorials [gnarmis](https://github.com/gnarmis) helped me get started with a minimal set up and some advice on where I might want to add more to my set up later on as I build more. This repo will be the boilerplate for my first few React projects.
+The general goal of this app is to start with a "blank" resistor, then allow the user to choose how many bands their resistor has, click on each band to choose the color of that band, click a button to register their choice, and let the app calculate the resistance.
 
-Much thanks to [gnarmis](https://github.com/gnarmis).
 
-## Important bits
-* `npm run build` This bundles everything up and builds it into the /site folder.
-* `webpack run dev` This spins up a server at `localhost:8080` where you can see your app running.
-* If you run one of each of those in separate terminal windows, you can save your file, then refresh the browser to see changes, rather than stopping the server, building, then restarting the server.
-* `npm install` Since node_modules is in .gitignore, you need to install them in your new project after cloning this. This command will install everything that is listed as dependencies in package.json.
+## Development choices
+* I am using React largely as a way to practice using React because I wanted to learn to use it.
+* Since I've also been learning to use SVG lately, I will probably use an SVG to display the resistor.
+* Additions to the core functions may include a reset button to reset the colored bands, more thorough responsiveness, calculations for current input and output based on the calculated resistance, displaying other information (where the calculated resistor is in terms of the E series, other units for the resistance, other abbreviations for the calculated resistance, etc.), and allowing for reverse calculation (allowing the user to enter resistance and displaying the colored bands from that).
+
+
+## Design choices
+* Most resistor decoders on the internet use arbitrarily chosen colors on the screen to represent the colors of the bands. I think that is silly. I am going to find photos of resistors, use a color picker on the different colors of bands, then average them to determine the colors for screen display.
+* Some resistor decoders have some idealized shape to represent the resistor. I'm just going to find photos and trace a resistor to get my shape.
+* Font choice will be informed by the fonts I see on resistors, in documentation, and on electrical diagrams.
