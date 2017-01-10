@@ -1,8 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom"
-require('../assets/stylesheets/base.scss');  
+import BandNumberMenu from './band-number-menu.jsx';
+require('../assets/stylesheets/base.scss');
+
+let bandNumbers = [4, 5, 6];
 
 ReactDOM.render(
-  <h1>hello jessa, again!!!!!!!!!!!</h1>,
+  <BandNumberMenu />,
     document.getElementById('root')
 );
