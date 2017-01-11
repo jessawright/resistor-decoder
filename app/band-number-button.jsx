@@ -4,13 +4,13 @@ import ReactDOM from "react-dom"
 class BandNumberButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state= {
-      isSelected: false
-    }
   }
+
   render() {
     return (
-      <button isSelected={this.state.isSelected}>
+      <button
+
+        >
         {this.props.bandNumber} bands
       </button>);
   }
