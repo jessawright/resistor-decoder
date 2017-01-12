@@ -1,11 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import BandNumberMenu from './band-number-menu.jsx';
+import Decoder from './decoder.jsx';
 require('../assets/stylesheets/base.scss');
 
-let bandNumbers = [4, 5, 6];
+const bandNumberOptions = ['4', '5', '6'];
 
 ReactDOM.render(
-  <BandNumberMenu />,
-    document.getElementById('root')
-);
+  <Decoder bandNumberOptions={bandNumberOptions}/>, document.getElementById('root'))
