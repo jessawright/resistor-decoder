@@ -5,19 +5,23 @@ import BandNumberButton from './band-number-button.jsx';
 class BandNumberMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.handleButtonClick = this.handleButtonClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   };
+  handleClick() {
+    return console.log('button clicked');
+  }
 
-  
   render() {
     var bandNumberOptions = [4, 5, 6];
-    var bandNumberButtonListItems = bandNumberOptions.map(function(item, index) {
-      return <BandNumberButton key={item} bandNumber={item} />;
+    const bandNumberButtonList = bandNumberOptions.map( (item, index) => {
+      return <BandNumberButton key={item} bandNumber={item} onClick={this.handleClick} />
     })
-    return <form>
-      {bandNumberButtonListItems}
-      <BandNumberButton key='7' bandNumber='7' onClick={console.log("button clicked")} />
-    </form>;
+    return (
+      <div>
+        {bandNumberButtonList}
+      </div>
+    );
+
   }
 }
 

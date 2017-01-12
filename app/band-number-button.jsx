@@ -8,11 +8,10 @@ class BandNumberButton extends React.Component {
 
   render() {
     return (
-      <button
-
-        >
-        {this.props.bandNumber} bands
-      </button>);
+      <button type="button" onClick={this.props.onClick}>
+        {this.props.bandNumber}  bands
+      </button>
+    );
   }
 
 }
