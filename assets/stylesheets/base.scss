@@ -26,3 +26,7 @@ body {
 #resistor-body {
   fill: $light-green-body;
 }
+
+[data-hidden-bands~="band-5"]  #band-5 {
+  fill: green;
+}

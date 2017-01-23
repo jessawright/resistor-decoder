@@ -14,7 +14,9 @@ class Decoder extends React.Component {
   }
 
   handleBandNumberSelection(e) {
+    /*
     console.log('clicked');
+    */
     this.setState({selectedBandNumber: e.target.value})
   }
 
