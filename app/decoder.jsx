@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import BandNumberMenu from './band-number-menu.jsx';
-import Print from './print.jsx';
+import Resistor from './resistor.jsx';
 
 class Decoder extends React.Component {
 
@@ -24,7 +24,7 @@ class Decoder extends React.Component {
       <div>
         <BandNumberMenu bandNumberOptions={this.props.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberSelection}/>
 
-        <Print selectedBandNumber={this.state.selectedBandNumber}/>
+        <Resistor selectedBandNumber={this.state.selectedBandNumber}/>
 
       </div>
     )
