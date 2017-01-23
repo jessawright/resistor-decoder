@@ -1,15 +1,17 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-class Print extends React.Component {
+class Resistor extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return <p>{this.props.selectedBandNumber}</p>
+    return <object type="image/svg+xml" data="/assets/resistor.svg" className="resistor">
+
+    </object>
   }
 
 }
 
-export default Print
+export default Resistor
