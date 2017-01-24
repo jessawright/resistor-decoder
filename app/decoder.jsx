@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import BandNumberMenu from './band-number-menu.jsx';
-import Resistor from './resistor.jsx';
+import ResistorTrial from './resistor-trial.jsx';
 
 class Decoder extends React.Component {
 
@@ -14,9 +14,9 @@ class Decoder extends React.Component {
   }
 
   handleBandNumberSelection(e) {
-    /*
+    {/*
     console.log('clicked');
-    */
+    */}
     this.setState({selectedBandNumber: e.target.value})
   }
 
@@ -26,7 +26,11 @@ class Decoder extends React.Component {
       <div>
         <BandNumberMenu bandNumberOptions={this.props.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberSelection}/>
 
-        <Resistor selectedBandNumber={this.state.selectedBandNumber}/>
+      <ResistorTrial selectedBandNumber={this.state.selectedBandNumber}/>
+
+        {/*
+      <Resistor selectedBandNumber={this.state.selectedBandNumber}/>
+      */}
 
       </div>
     )

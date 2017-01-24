@@ -19,11 +19,9 @@ class Resistor extends React.Component {
 
     console.log(bandsToHide);
 
-
-
-    return <div data-hidden-bands={bandsToHide}><Isvg src="/assets/resistor.svg" uniquifyIDs={false} data-hidden-bands={bandsToHide}></Isvg></div>
-
-    /*<object type="image/svg+xml" data="/assets/resistor.svg" className="resistor" data-hidden-bands={bandsToHide}></object>*/
+    return <div data-hidden-bands={bandsToHide}>
+      <Isvg src="/assets/resistor.svg" uniquifyIDs={false} data-hidden-bands={bandsToHide}></Isvg>
+    </div>
 
   }
 
