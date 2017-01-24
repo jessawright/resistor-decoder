@@ -27,6 +27,6 @@ body {
   fill: $light-green-body;
 }
 
-  #band-5 {
-  fill: green;
+[data-hidden-bands="band-5"] #band-5 {
+  fill: red;
 }
