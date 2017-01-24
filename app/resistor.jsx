@@ -1,6 +1,6 @@
-import React from "react"
-import ReactDOM from "react-dom"
-
+import React from "react";
+import ReactDOM from "react-dom";
+import Isvg from 'react-inlinesvg';
 
 class Resistor extends React.Component {
   constructor(props) {
@@ -19,11 +19,9 @@ class Resistor extends React.Component {
 
     console.log(bandsToHide);
 
-    var svgSrc = "xlink:href=\"/assets/resistor.svg\"";
 
-    return <svg>
-      <use {svgSrc}></use>
-    </svg>
+
+    return <Isvg src="/assets/resistor.svg" uniquifyIDs={false}></Isvg>
 
     /*<object type="image/svg+xml" data="/assets/resistor.svg" className="resistor" data-hidden-bands={bandsToHide}></object>*/
 
