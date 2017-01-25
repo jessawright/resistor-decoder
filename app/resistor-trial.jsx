@@ -6,6 +6,7 @@ import Band3 from './band-3.jsx';
 import Band4 from './band-4.jsx';
 import Band5 from './band-5.jsx';
 import Band6 from './band-6.jsx';
+import BandColorMenu from './band-color-menu.jsx';
 
 class ResistorTrial extends React.Component {
   constructor(props) {

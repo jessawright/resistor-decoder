@@ -8,7 +8,7 @@ class Decoder extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedBandNumber: this.props.bandNumberOptions[0],
+      selectedBandNumber: this.props.resistorDecoderInfo.bandNumberOptions[0],
       bandColors: {
         band1Color: 'blank',
         band2Color: 'blank',
@@ -32,9 +32,9 @@ class Decoder extends React.Component {
   render() {
     return (
       <div>
-        <BandNumberMenu bandNumberOptions={this.props.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberSelection}/>
+        <BandNumberMenu bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberSelection}/>
 
-        <ResistorTrial selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors}/> 
+        <ResistorTrial selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors}/>
       </div>
     )
   }
