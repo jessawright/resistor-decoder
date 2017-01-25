@@ -8,7 +8,15 @@ class Decoder extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedBandNumber: this.props.bandNumberOptions[0]
+      selectedBandNumber: this.props.bandNumberOptions[0],
+      bandColors: {
+        band1Color: 'blank',
+        band2Color: 'blank',
+        band3Color: 'blank',
+        band4Color: 'blank',
+        band5Color: 'blank',
+        band6Color: 'blank'
+      }
     }
     this.handleBandNumberSelection = this.handleBandNumberSelection.bind(this);
   }
@@ -16,22 +24,17 @@ class Decoder extends React.Component {
   handleBandNumberSelection(e) {
     {/*
     console.log('clicked');
-    */}
+    */
+    }
     this.setState({selectedBandNumber: e.target.value})
   }
-
 
   render() {
     return (
       <div>
         <BandNumberMenu bandNumberOptions={this.props.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberSelection}/>
 
-      <ResistorTrial selectedBandNumber={this.state.selectedBandNumber}/>
-
-        {/*
-      <Resistor selectedBandNumber={this.state.selectedBandNumber}/>
-      */}
-
+        <ResistorTrial selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors}/> 
       </div>
     )
   }
