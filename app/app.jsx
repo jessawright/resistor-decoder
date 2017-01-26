@@ -6,7 +6,7 @@ require('../assets/stylesheets/base.scss');
 const resistorDecoderInfo = {
   bandNumberOptions: ['4', '5', '6'],
   bandColorCode: {
-    Digit: {
+    'digit': {
       'black': 0,
       'brown': 1,
       'red': 2,
@@ -18,8 +18,7 @@ const resistorDecoderInfo = {
       'grey': 8,
       'white': 9
     },
-    Multiplier: {
-      'pink': .001,
+    'multiplier': {
       'silver': .01,
       'gold': .1,
       'black': 1,
@@ -31,7 +30,7 @@ const resistorDecoderInfo = {
       'blue': 1000000,
       'violet': 10000000
     },
-    Tolerance: {
+    'tolerance': {
       'none': 20,
       'silver': 10,
       'gold': 5,
@@ -42,12 +41,42 @@ const resistorDecoderInfo = {
       'violet': .1,
       'grey': .05
     },
-    TempCoefficient: {
+    'tempCoefficient': {
       'brown': 100,
       'red': 50,
       'orange': 15,
       'yellow': 25
     }
+  },
+  bandMeanings: {
+    '4': {
+      band1: 'digit',
+      band2: 'digit',
+      band3: 'mulitplier',
+      band6: 'tolerance'
+    },
+    '5': {
+      band1: 'digit',
+      band2: 'digit',
+      band3: 'digit',
+      band4: 'multiplier',
+      band6: 'tolerance'
+    },
+    '6': {
+      band1: 'digit',
+      band2: 'digit',
+      band3: 'digit',
+      bands: 'multiplier',
+      band5: 'tolerance',
+      band6: 'tempCoefficient'
+
+    }
+
+  },
+  units: {
+    'multiplier': '&#8486;', /* html entity for ohm */
+    'tolerance': '%',
+    'tempCoefficient': 'ppm/K'
   }
 };
 

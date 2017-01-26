@@ -7,7 +7,22 @@ class BandColorMenu extends React.Component {
   }
 
   render() {
-    return (<div></div>
+    var thisBandMeaning = this.props.resistorDecoderInfo.bandMeanings[this.props.selectedBandNumber][this.props.bandThisIs];
+    var colorOptionList = Object.getOwnPropertyNames (this.props.resistorDecoderInfo.bandColorCode[thisBandMeaning]);
+    var colorOptionListMarkup = colorOptionList.map(function(val) {
+      return <li>val</li>;
+    }
+
+  )
+
+
+    console.log(colorOptionListMarkup);
+
+
+    return (
+      <ul>
+        {colorOptionListMarkup}
+      </ul>
     );
   }
 

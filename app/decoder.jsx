@@ -32,9 +32,15 @@ class Decoder extends React.Component {
   render() {
     return (
       <div>
-        <BandNumberMenu bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberSelection}/>
+        <BandNumberMenu
+          bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions}
+          selectedBandNumber={this.state.selectedBandNumber}
+          onChange={this.handleBandNumberSelection}/>
 
-        <ResistorTrial selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors}/>
+        <ResistorTrial
+          selectedBandNumber={this.state.selectedBandNumber} 
+          bandColors={this.state.bandColors}
+          resistorDecoderInfo={this.props.resistorDecoderInfo}/>
       </div>
     )
   }

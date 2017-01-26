@@ -7,12 +7,7 @@ class Band3 extends React.Component {
   }
 
   render() {
-    return (
-      <g id="g4211" transform="translate(-56 -814.31)">
-        <path id="band-3" className={this.props.bandColor} d="m260.05 826.21v146.27c9.2856-0.002 19.412-0.0123 29.906-0.0215v-146.24c-10.494-0.005-20.621-0.01-29.906-0.008z"/>
-      </g>
-
-    );
+    return (<path id="band-3" className={this.props.bandColor} d="m204.05 11.903v146.27c9.2862-0.002 19.413-0.0123 29.908-0.0215v-146.24c-10.495-0.005-20.622-0.01-29.908-0.008z"/>);
   }
 
 }

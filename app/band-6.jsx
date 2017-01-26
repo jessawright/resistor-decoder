@@ -8,9 +8,7 @@ class Band6 extends React.Component {
 
   render() {
     return (
-      <g id="g4217" transform="translate(-56 -814.31)">
-        <path id="band-6" className={this.props.bandColor} d="m470.05 814.36v170h49.898v-170h-49.898z"/>
-      </g>
+        <path id="band-6" className={this.props.bandColor} d="m414.05 0.049892v170h49.898v-170h-49.898z"/>
 
     );
   }
