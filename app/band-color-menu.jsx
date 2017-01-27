@@ -17,10 +17,6 @@ class BandColorMenu extends React.Component {
 
   )
 
-
-    console.log(colorOptionList);
-
-
     return (
       <ul id="band-color-menu">
         {colorOptionListMarkup}

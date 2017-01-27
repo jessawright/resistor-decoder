@@ -16,17 +16,19 @@ class Decoder extends React.Component {
         band4Color: 'blank',
         band5Color: 'blank',
         band6Color: 'blank'
-      }
-    }
+      },
+      bandClicked: ''
+    };
     this.handleBandNumberSelection = this.handleBandNumberSelection.bind(this);
+    this.handleOnBandClick = this.handleOnBandClick.bind(this);
   }
 
   handleBandNumberSelection(e) {
-    {/*
-    console.log('clicked');
-    */
-    }
     this.setState({selectedBandNumber: e.target.value})
+  }
+  handleOnBandClick(e) {
+    this.setState({bandClicked: e.target.id});
+
   }
 
   render() {
@@ -38,9 +40,11 @@ class Decoder extends React.Component {
           onChange={this.handleBandNumberSelection}/>
 
         <ResistorTrial
-          selectedBandNumber={this.state.selectedBandNumber} 
+          selectedBandNumber={this.state.selectedBandNumber}
           bandColors={this.state.bandColors}
-          resistorDecoderInfo={this.props.resistorDecoderInfo}/>
+          resistorDecoderInfo={this.props.resistorDecoderInfo}
+          onClick={this.handleOnBandClick}
+          bandClicked={this.state.bandClicked}/>
       </div>
     )
   }
