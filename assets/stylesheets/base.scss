@@ -37,13 +37,21 @@ body {
   fill: black;
 }
 
-li {
-  color: red;
-  font-size: 24pt;
-  z-index: 100;
+.container {
+  position: relative;
 }
 
-use {
-  display: inline;
-  visibility: visible;
+#band-color-menu {
+  background-color: white;
+  color: blue;
+  position: absolute;
+  top: -25px;
+  left: 10%;
+  list-style: none;
+
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
