@@ -7,7 +7,7 @@ class Band3 extends React.Component {
   }
 
   render() {
-    return (<path id="band3" className={this.props.bandColor} onClick={this.props.onClick}  d="m204.05 11.903v146.27c9.2862-0.002 19.413-0.0123 29.908-0.0215v-146.24c-10.495-0.005-20.622-0.01-29.908-0.008z"/>);
+    return (<path id="band3" className={this.props.bandColor} onClick={this.props.onBandClick}  d="m204.05 11.903v146.27c9.2862-0.002 19.413-0.0123 29.908-0.0215v-146.24c-10.495-0.005-20.622-0.01-29.908-0.008z"/>);
   }
 
 }

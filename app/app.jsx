@@ -52,7 +52,7 @@ const resistorDecoderInfo = {
     '4': {
       band1: 'digit',
       band2: 'digit',
-      band3: 'mulitplier',
+      band3: 'multiplier',
       band6: 'tolerance'
     },
     '5': {
@@ -66,7 +66,7 @@ const resistorDecoderInfo = {
       band1: 'digit',
       band2: 'digit',
       band3: 'digit',
-      bands: 'multiplier',
+      band4: 'multiplier',
       band5: 'tolerance',
       band6: 'tempCoefficient'
 

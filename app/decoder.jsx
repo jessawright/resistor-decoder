@@ -10,41 +10,53 @@ class Decoder extends React.Component {
     this.state = {
       selectedBandNumber: this.props.resistorDecoderInfo.bandNumberOptions[0],
       bandColors: {
-        band1Color: 'blank',
-        band2Color: 'blank',
-        band3Color: 'blank',
-        band4Color: 'blank',
-        band5Color: 'blank',
-        band6Color: 'blank'
+        'band1': 'blank',
+        'band2': 'blank',
+        'band3': 'blank',
+        'band4': 'blank',
+        'band5': 'blank',
+        'band6': 'blank'
       },
+
       bandClicked: ''
     };
-    this.handleBandNumberSelection = this.handleBandNumberSelection.bind(this);
-    this.handleOnBandClick = this.handleOnBandClick.bind(this);
-  }
+    this.handleBandNumberChange = this.handleBandNumberChange.bind(this);
+    this.handleBandClick = this.handleBandClick.bind(this);
+    this.handleColorClick = this.handleColorClick.bind(this);
+  };
 
-  handleBandNumberSelection(e) {
-    this.setState({selectedBandNumber: e.target.value})
-  }
-  handleOnBandClick(e) {
-    this.setState({bandClicked: e.target.id});
+  handleBandNumberChange(event) {
+    this.setState({selectedBandNumber: event.target.value})
+  };
+  handleBandClick(event) {
+    this.setState({bandClicked: event.target.id});
+  };
 
-  }
+  handleColorClick(event) {
+    var bandToUpdate = this.state.bandClicked;
+    this.setState({bandColors:
+      {[bandToUpdate]: event.target.id}});
+
+  };
 
   render() {
+
     return (
       <div>
         <BandNumberMenu
           bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions}
           selectedBandNumber={this.state.selectedBandNumber}
-          onChange={this.handleBandNumberSelection}/>
+          onChange={this.handleBandNumberChange}/>
 
         <ResistorTrial
           selectedBandNumber={this.state.selectedBandNumber}
           bandColors={this.state.bandColors}
           resistorDecoderInfo={this.props.resistorDecoderInfo}
-          onClick={this.handleOnBandClick}
-          bandClicked={this.state.bandClicked}/>
+          onBandClick={this.handleBandClick}
+          bandClicked={this.state.bandClicked}
+          onColorClick={this.handleColorClick}
+          />
+        
       </div>
     )
   }

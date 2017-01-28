@@ -9,18 +9,20 @@ class BandColorMenu extends React.Component {
   render() {
 
     /* Band specified for testing */
-    var thisBandMeaning = this.props.resistorDecoderInfo.bandMeanings[this.props.selectedBandNumber].band6;
-    var colorOptionList = Object.getOwnPropertyNames (this.props.resistorDecoderInfo.bandColorCode[thisBandMeaning]);
-    var colorOptionListMarkup = colorOptionList.map(function(val) {
-      return <li key={val}>{val}</li>;
-    }
-
-  )
+    var thisBandMeaning = this.props.resistorDecoderInfo.bandMeanings[this.props.selectedBandNumber][this.props.bandClicked];
+    var colorOptionList = Object.getOwnPropertyNames(this.props.resistorDecoderInfo.bandColorCode[thisBandMeaning]);
+    let colorOptionListMarkup = colorOptionList.map((item, index) => {
+      return (
+        <label key={item} className="color-menu-options">
+          <input type="radio"  id={item} onChange={this.props.onColorClick} checked={this.props.bandColors[this.props.bandClicked] == item}/> {item}
+        </label>
+      );
+    })
 
     return (
-      <ul id="band-color-menu">
+      <form id="band-color-menu">
         {colorOptionListMarkup}
-      </ul>
+      </form >
     );
   }
 
