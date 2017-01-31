@@ -31,7 +31,6 @@ const resistorDecoderInfo = {
       'violet': 10000000
     },
     'tolerance': {
-      'none': 20,
       'silver': 10,
       'gold': 5,
       'brown': 1,

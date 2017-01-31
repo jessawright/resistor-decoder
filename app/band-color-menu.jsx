@@ -20,7 +20,7 @@ class BandColorMenu extends React.Component {
     })
 
     return (
-      <form id="band-color-menu">
+      <form id="band-color-menu" className={this.props.bandClicked}>
         {colorOptionListMarkup}
       </form >
     );

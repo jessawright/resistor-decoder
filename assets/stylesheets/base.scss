@@ -1,4 +1,3 @@
-
 /* Resistor colors taken from resistor photos */
 $black-band: #161619;
 $brown-band: #4C231F;
@@ -8,7 +7,7 @@ $yellow-band: #E7C735;
 $green-band: #307D4F;
 $blue-band: #17467C;
 $violet-band: #6A2C6A;
-$gray-band: #77737F;
+$grey-band: #77737F;
 $white-band: #DCD4D1;
 $gold-band: #CBA254;
 $silver-band: #A8AAAD;
@@ -19,38 +18,103 @@ $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
 $wire: #BCB8B0;
 /* blank-band -- css gradient of black and white stripes? or an svg filter? */
-
-
-
 /* add pcb-green and pcb-gold? */
-
-
 body {
-  background-color: white;
+    background-color: white;
 }
 
 #resistor-body {
-  fill: $light-green-body;
+    fill: $tan-body;
 }
 
 .blank {
-  fill: black;
+    fill: black;
 }
 
 .container {
-  position: relative;
+    position: relative;
+    width: fit-content;
+
 }
 
 #band-color-menu {
-  background-color: white;
-  color: blue;
-  position: absolute;
-  top: -25px;
-  left: 10%;
-
+    background-color: white;
+    border: 2px solid black;
+    width: fit-content;
+    padding: .5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
 }
 
+#band-color-menu.band1 {
+  left: 19.7%;
+}
+#band-color-menu.band2 {
+  left: 32.1%;
+}
+#band-color-menu.band3 {
+  left: 44.4%;
+}
+#band-color-menu.band4 {
+  left: 56.7%;
+}
+#band-color-menu.band5 {
+  left: 69.1%;
+}
+#band-color-menu.band6 {
+  left: 88.0%;
+}
+
 .color-menu-options {
-  display: block;
+    display: block;
+}
+
+.black {
+    fill: $black-band;
+}
+
+.brown {
+    fill: $brown-band;
+}
+
+.red {
+    fill: $red-band;
+}
+
+.orange {
+    fill: $orange-band;
+}
+
+.yellow {
+    fill: $yellow-band;
+}
+
+.green {
+    fill: $green-band;
+}
+
+.blue {
+    fill: $blue-band;
+}
+
+.violet {
+    fill: $violet-band;
+}
+
+.grey {
+    fill: $grey-band;
+}
+
+.white {
+    fill: $white-band;
+}
+
+.gold {
+    fill: $gold-band;
+}
+
+.silver {
+    fill: $silver-band;
 }

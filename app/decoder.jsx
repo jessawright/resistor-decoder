@@ -28,35 +28,28 @@ class Decoder extends React.Component {
   handleBandNumberChange(event) {
     this.setState({selectedBandNumber: event.target.value})
   };
+
   handleBandClick(event) {
     this.setState({bandClicked: event.target.id});
   };
 
   handleColorClick(event) {
-    var bandToUpdate = this.state.bandClicked;
-    this.setState({bandColors:
-      {[bandToUpdate]: event.target.id}});
-
+    var bandColorsTemp = this.state.bandColors;
+    bandColorsTemp[this.state.bandClicked] = event.target.id;
+    this.setState({
+      bandColors: bandColorsTemp,
+      bandClicked: ''
+    });
   };
 
   render() {
 
     return (
       <div>
-        <BandNumberMenu
-          bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions}
-          selectedBandNumber={this.state.selectedBandNumber}
-          onChange={this.handleBandNumberChange}/>
+        <BandNumberMenu bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberChange}/>
 
-        <ResistorTrial
-          selectedBandNumber={this.state.selectedBandNumber}
-          bandColors={this.state.bandColors}
-          resistorDecoderInfo={this.props.resistorDecoderInfo}
-          onBandClick={this.handleBandClick}
-          bandClicked={this.state.bandClicked}
-          onColorClick={this.handleColorClick}
-          />
-        
+        <ResistorTrial selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors} resistorDecoderInfo={this.props.resistorDecoderInfo} onBandClick={this.handleBandClick} bandClicked={this.state.bandClicked} onColorClick={this.handleColorClick}/>
+
       </div>
     )
   }
