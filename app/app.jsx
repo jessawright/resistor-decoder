@@ -49,25 +49,25 @@ const resistorDecoderInfo = {
   },
   bandMeanings: {
     '4': {
-      band1: 'digit',
-      band2: 'digit',
-      band3: 'multiplier',
-      band6: 'tolerance'
+      'band1': 'digit',
+      'band2': 'digit',
+      'band3': 'multiplier',
+      'band6': 'tolerance'
     },
     '5': {
-      band1: 'digit',
-      band2: 'digit',
-      band3: 'digit',
-      band4: 'multiplier',
-      band6: 'tolerance'
+      'band1': 'digit',
+      'band2': 'digit',
+      'band3': 'digit',
+      'band4': 'multiplier',
+      'band6': 'tolerance'
     },
     '6': {
-      band1: 'digit',
-      band2: 'digit',
-      band3: 'digit',
-      band4: 'multiplier',
-      band5: 'tolerance',
-      band6: 'tempCoefficient'
+      'band1': 'digit',
+      'band2': 'digit',
+      'band3': 'digit',
+      'band4': 'multiplier',
+      'band5': 'tolerance',
+      'band6': 'tempCoefficient'
 
     }
 
@@ -75,7 +75,7 @@ const resistorDecoderInfo = {
   units: {
     'multiplier': '&#8486;', /* html entity for ohm */
     'tolerance': '%',
-    'tempCoefficient': 'ppm/K'
+    'tempCoefficient': 'ppm/degreeC'
   }
 };
 

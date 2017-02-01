@@ -27,6 +27,7 @@ body {
     fill: $tan-body;
 }
 
+/* Change to a blank-band pattern */
 .blank {
     fill: black;
 }
@@ -34,18 +35,16 @@ body {
 .container {
     position: relative;
     width: fit-content;
-
 }
 
 #band-color-menu {
     background-color: white;
     border: 2px solid black;
     width: fit-content;
-    padding: .5em;
+    padding: .5rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
 }
 
 #band-color-menu.band1 {
@@ -117,4 +116,11 @@ body {
 
 .silver {
     fill: $silver-band;
+}
+.calc-boxes {
+  list-style: none;
+  li {
+    display: inline-block;
+    margin: .5rem;
+  }
 }
