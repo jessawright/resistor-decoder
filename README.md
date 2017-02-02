@@ -22,3 +22,7 @@ The general goal of this app is to start with a "blank" resistor, then allow the
     * Other units for the resistance.
     * Other abbreviations for the calculated resistance.
 * Allowing for reverse calculation (the user enters resistance and the app displays the colored bands from that).
+
+
+##### Pushing just `site` to `gh-pages`
+`git subtree push --prefix site origin gh-pages`
