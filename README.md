@@ -4,12 +4,12 @@ The general goal of this app is to start with a "blank" resistor, then allow the
 
 
 ## Development choices
-* I am using React largely as a way to practice and learn to use React.
-* This has also been a good opportunity to learn SVG. In making this app, I've learned more about creating SVGs using Inkscape and Adobe Illustrator, optimization, and implementing SVGs.
+* I am using React largely as a way to practice and learn to use React. In the process. I've also learned and practiced using Webpack, several Webpack modules, npm, and SCSS.
+* This has also been a good opportunity to learn SVG. In making this app, I've learned more about creating SVGs using Inkscape and Adobe Illustrator, various methods of optimizing SVGs, and various methods of implementing SVGs.
 
 
 ## Design choices
-* Most resistor decoders on the internet use arbitrarily chosen colors on the screen to represent the colors of the bands. I chose my colors based on photos of actual resistors.
+* Most resistor decoders on the internet use arbitrarily chosen colors on the screen to represent the colors of the bands. I chose my colors based on photos of actual resistors. While there may be (probably?) standardized ideal colors for these paints, they will look different in reality, which is what I am more interested in replicating.
 * Some resistor decoders have some idealized shape to represent the resistor. While my shape is still somewhat idealized, it is based on a tracing of a photo of a resistor.
 * Font choice will be informed by the fonts I see on resistors, in documentation, on electrical diagrams, and on PCBs.
 

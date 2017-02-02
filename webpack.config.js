@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpackSettings = {
   entry: './app/app.jsx',
   output: {
+    publicPath: 'https://github.com/jessawright/resistor-decoder/',
     path: './site/js',
     filename: 'app.js'
   },

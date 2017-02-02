@@ -1,12 +1,15 @@
 {
   "name": "resistor-decoder",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An app to calculate the resistance of a resistor based on its colored bands.",
+  "homepage": "https://jessawright.github.io/resistor-decoder",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch",
-    "dev": "webpack-dev-server --content-base ./site"
+    "compile": "webpack --watch",
+    "build": "webpack",
+    "dev": "webpack-dev-server --content-base ./site",
+    "deploy": "gh-pages -d build"
   },
   "author": "Jessa Wright",
   "license": "ISC",
@@ -17,6 +20,7 @@
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^0.12.0",
     "node-sass": "^4.1.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
