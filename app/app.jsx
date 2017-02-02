@@ -73,9 +73,9 @@ const resistorDecoderInfo = {
 
   },
   units: {
-    'multiplier': '&#8486;', /* html entity for ohm */
+    'multiplier': 'Ω', /* html entity for ohm */
     'tolerance': '%',
-    'tempCoefficient': 'ppm/degreeC'
+    'tempCoefficient': 'ppm/°C'
   }
 };
 

@@ -119,8 +119,11 @@ body {
 }
 .calc-boxes {
   list-style: none;
-  li {
+  .calc-box {
     display: inline-block;
     margin: .5rem;
+    padding: .25rem;
+    border: 2px solid black;
+    min-width: 7em;
   }
 }

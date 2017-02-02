@@ -18,35 +18,36 @@ class Calculations extends React.Component {
     var decodedResistor = {
       digits: []
     };
-
-    if (!activeBandColors.includes('blank')) {
-      activeBands.forEach(function(val) {
-        switch (resistorDecoderInfo.bandMeanings[selectedBandNumber][val]) {
-          case 'digit':
-            decodedResistor.digits.push(resistorDecoderInfo.bandColorCode['digit'][bandColors[val]]);
-            break;
-          case 'multiplier':
-            decodedResistor.multiplier = resistorDecoderInfo.bandColorCode['multiplier'][bandColors[val]];
-            break;
-          case 'tolerance':
-            decodedResistor.tolerance = resistorDecoderInfo.bandColorCode['tolerance'][bandColors[val]];
-            break;
-          case 'tempCoefficient':
-            decodedResistor.tempCoefficient = resistorDecoderInfo.bandColorCode['tempCoefficient'][bandColors[val]];
-            break;
-        }
-      })
+    function decode(val) {
+      switch (resistorDecoderInfo.bandMeanings[selectedBandNumber][val]) {
+        case 'digit':
+          decodedResistor.digits.push(resistorDecoderInfo.bandColorCode['digit'][bandColors[val]]);
+          break;
+        case 'multiplier':
+          decodedResistor.multiplier = resistorDecoderInfo.bandColorCode['multiplier'][bandColors[val]];
+          break;
+        case 'tolerance':
+          decodedResistor.tolerance = resistorDecoderInfo.bandColorCode['tolerance'][bandColors[val]];
+          break;
+        case 'tempCoefficient':
+          decodedResistor.tempCoefficient = resistorDecoderInfo.bandColorCode['tempCoefficient'][bandColors[val]];
+          break;
+      }
     };
 
-    console.log(decodedResistor);
+    if (!activeBandColors.includes('blank')) {
+      activeBands.forEach(decode);
+    };
+
+
 
     return (
       <div>
         <h2>Resistor Value</h2>
         <ul className='calc-boxes'>
-          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="digit-box" decodedResistor={decodedResistor}/>
-          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tolerance-box" decodedResistor={decodedResistor}/> {this.props.selectedBandNumber === '6'
-            ? <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tempCoefficient-box" decodedResistor={decodedResistor}/>
+          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="digit-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors}/>
+          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tolerance-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors}/> {this.props.selectedBandNumber === '6'
+            ? <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tempCoefficient-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors}/>
             : ''}
         </ul>
       </div>
