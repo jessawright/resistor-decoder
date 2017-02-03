@@ -1,6 +1,5 @@
 /* Resistor colors taken from resistor photos */
 /* Can I use css to get a glitter effect on these? maybe an svg filter? */
-/* blank-band -- css gradient of black and white stripes? or an svg filter? */
 /* add pcb-green and pcb-gold? */
 body {
   background-color: white; }
@@ -10,7 +9,7 @@ body {
 
 /* Change to a blank-band pattern */
 .blank {
-  fill: black; }
+  fill: url("#transparent"); }
 
 .container {
   position: relative;

@@ -1,4 +1,5 @@
 /* Resistor colors taken from resistor photos */
+
 $black-band: #161619;
 $brown-band: #4C231F;
 $red-band: #A71E25;
@@ -17,7 +18,7 @@ $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
 $wire: #BCB8B0;
-/* blank-band -- css gradient of black and white stripes? or an svg filter? */
+
 /* add pcb-green and pcb-gold? */
 body {
     background-color: white;
@@ -29,7 +30,7 @@ body {
 
 /* Change to a blank-band pattern */
 .blank {
-    fill: black;
+    fill: url("#transparent");
 }
 
 .container {
