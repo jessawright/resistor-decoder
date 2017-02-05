@@ -1,5 +1,4 @@
 /* Resistor colors taken from resistor photos */
-
 $black-band: #161619;
 $brown-band: #4C231F;
 $red-band: #A71E25;
@@ -18,7 +17,6 @@ $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
 $wire: #BCB8B0;
-
 /* add pcb-green and pcb-gold? */
 body {
     background-color: white;
@@ -27,10 +25,9 @@ body {
 #resistor-body {
     fill: $tan-body;
 }
-
 /* Change to a blank-band pattern */
 .blank {
-    fill: url("#transparent");
+    fill: url("#blank-band");
 }
 
 .container {
@@ -42,29 +39,34 @@ body {
     background-color: white;
     border: 2px solid black;
     width: fit-content;
-    padding: .5rem;
+    padding: 0.5rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 
 #band-color-menu.band1 {
-  left: 19.7%;
+    left: 19.7%;
 }
+
 #band-color-menu.band2 {
-  left: 32.1%;
+    left: 32.1%;
 }
+
 #band-color-menu.band3 {
-  left: 44.4%;
+    left: 44.4%;
 }
+
 #band-color-menu.band4 {
-  left: 56.7%;
+    left: 56.7%;
 }
+
 #band-color-menu.band5 {
-  left: 69.1%;
+    left: 69.1%;
 }
+
 #band-color-menu.band6 {
-  left: 88.0%;
+    left: 88.0%;
 }
 
 .color-menu-options {
@@ -118,13 +120,15 @@ body {
 .silver {
     fill: $silver-band;
 }
+
 .calc-boxes {
-  list-style: none;
-  .calc-box {
-    display: inline-block;
-    margin: .5rem;
-    padding: .25rem;
-    border: 2px solid black;
-    min-width: 7em;
-  }
+    list-style: none;
+
+    .calc-box {
+        display: inline-block;
+        margin: 0.5rem;
+        padding: 0.25rem;
+        border: 2px solid black;
+        min-width: 7em;
+    }
 }

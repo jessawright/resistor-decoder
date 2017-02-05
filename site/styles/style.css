@@ -9,7 +9,7 @@ body {
 
 /* Change to a blank-band pattern */
 .blank {
-  fill: url("#transparent"); }
+  fill: url("#blank-band"); }
 
 .container {
   position: relative;
@@ -19,7 +19,7 @@ body {
   background-color: white;
   border: 2px solid black;
   width: fit-content;
-  padding: .5rem;
+  padding: 0.5rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
@@ -85,7 +85,7 @@ body {
   list-style: none; }
   .calc-boxes .calc-box {
     display: inline-block;
-    margin: .5rem;
-    padding: .25rem;
+    margin: 0.5rem;
+    padding: 0.25rem;
     border: 2px solid black;
     min-width: 7em; }
