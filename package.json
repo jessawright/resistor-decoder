@@ -2,7 +2,7 @@
   "name": "resistor-decoder",
   "version": "0.1.0",
   "description": "An app to calculate the resistance of a resistor based on its colored bands.",
-  "homepage": "https://jessawright.github.io/resistor-decoder",
+  "homepage": "https://github.com/jessawright/resistor-decoder",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,10 +20,12 @@
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.10.0",
     "gh-pages": "^0.12.0",
     "node-sass": "^4.1.1",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
+    "svgo-loader": "^1.1.2",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },

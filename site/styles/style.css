@@ -1,15 +1,10 @@
 /* Resistor colors taken from resistor photos */
-/* Can I use css to get a glitter effect on these? maybe an svg filter? */
 /* add pcb-green and pcb-gold? */
 body {
   background-color: white; }
 
 #resistor-body {
   fill: #E8C599; }
-
-/* Change to a blank-band pattern */
-.blank {
-  fill: url("#blank-band"); }
 
 .container {
   position: relative;
@@ -45,6 +40,9 @@ body {
 .color-menu-options {
   display: block; }
 
+.blank {
+  fill: url("#blank-band"); }
+
 .black {
   fill: #161619; }
 
@@ -76,10 +74,10 @@ body {
   fill: #DCD4D1; }
 
 .gold {
-  fill: #CBA254; }
+  fill: url("#gold-glitter"); }
 
 .silver {
-  fill: #A8AAAD; }
+  fill: url("#silver-glitter"); }
 
 .calc-boxes {
   list-style: none; }

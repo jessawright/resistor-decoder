@@ -10,8 +10,10 @@ $violet-band: #6A2C6A;
 $grey-band: #77737F;
 $white-band: #DCD4D1;
 $gold-band: #CBA254;
+
+
 $silver-band: #A8AAAD;
-/* Can I use css to get a glitter effect on these? maybe an svg filter? */
+
 $tan-body: #E8C599;
 $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
@@ -25,10 +27,7 @@ body {
 #resistor-body {
     fill: $tan-body;
 }
-/* Change to a blank-band pattern */
-.blank {
-    fill: url("#blank-band");
-}
+
 
 .container {
     position: relative;
@@ -73,6 +72,10 @@ body {
     display: block;
 }
 
+.blank {
+    fill: url("#blank-band");
+}
+
 .black {
     fill: $black-band;
 }
@@ -114,11 +117,11 @@ body {
 }
 
 .gold {
-    fill: $gold-band;
+    fill: url("#gold-glitter");
 }
 
 .silver {
-    fill: $silver-band;
+    fill: url("#silver-glitter");
 }
 
 .calc-boxes {

@@ -2,31 +2,54 @@ var webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var webpackSettings = {
-  entry: './app/app.jsx',
-  output: {
-    publicPath: 'https://github.com/jessawright/resistor-decoder/',
-    path: './site/js',
-    filename: 'app.js'
-  },
-  module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      exclude: /(node_modules|bower_components)/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['es2015', 'react']
-      }
-    }, {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('css!sass')
-    }]
+ entry: './app/app.jsx',
+ output: {
+  publicPath: 'http://127.0.0.1:8080/',
+  path: './site/js',
+  filename: 'app.js'
+ },
+ module: {
+  loaders: [{
+   test: /\.jsx?$/,
+   exclude: /(node_modules|bower_components)/,
+   loader: 'babel-loader',
+   query: {
+    presets: ['es2015', 'react']
+   }
+  }, {
+   test: /\.scss$/,
+   loader: ExtractTextPlugin.extract('css!sass')
+  }, {
+   test: /\.svg$/,
+   use: [{
+     loader: 'file-loader'
+    },
+    {
+     loader: 'svgo-loader',
+     options: {
+      plugins: [{
+        removeTitle: true
+       },
+       {
+        convertColors: {
+         shorthex: false
+        }
+       },
+       {
+        convertPathData: false
+       }
+      ]
+     }
+    }
+   ]
+  }]
 
-  },
-  plugins: [
-    new ExtractTextPlugin('../styles/style.css', {
-      allChunks: true
-    })
-  ]
+ },
+ plugins: [
+  new ExtractTextPlugin('../styles/style.css', {
+   allChunks: true
+  })
+ ]
 }
 
 module.exports = webpackSettings
