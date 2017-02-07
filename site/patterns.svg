@@ -1,6 +1,10 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
 	<defs>
+		<pattern id="blank-band" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(315)">
+			<rect x="0" y="0" width="8" height="8" fill="#555" />
+			<rect x="0" y="0" width="4" height="8" stroke="none" fill="#222" />
+		</pattern>
 		<rect id="a" x="0" y="0" width="2" height="2"/>
 		<rect id="b" x="2" y="2" width="2" height="2"/>
 		<rect id="c" x="0" y="0" width="1" height="1"/>

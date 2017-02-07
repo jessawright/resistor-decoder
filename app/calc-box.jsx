@@ -16,7 +16,13 @@ class CalcBox extends React.Component {
     function displayValues() {
       switch (id) {
         case 'digit-box':
+        if ((decodedResistor.digits.join('') * decodedResistor['multiplier']) >= 1000000) {
+          boxContent = ((decodedResistor.digits.join('') * decodedResistor['multiplier']) / 1000000) + 'M' + units['multiplier'];
+        } else if ((decodedResistor.digits.join('') * decodedResistor['multiplier']) >= 1000) {
+          boxContent = ((decodedResistor.digits.join('') * decodedResistor['multiplier']) / 1000) + 'K' + units['multiplier'];
+        } else {
         boxContent = (decodedResistor.digits.join('') * decodedResistor['multiplier']) + ' ' + units['multiplier'];
+      };
         break;
         case 'tolerance-box':
         boxContent = decodedResistor['tolerance'] + ' ' + units['tolerance'];
