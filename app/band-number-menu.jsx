@@ -13,7 +13,7 @@ class BandNumberMenu extends React.Component {
       return <BandNumberButton key={item} bandNumber={item} onChange={this.props.onChange} selectedBandNumber={this.props.selectedBandNumber} checked={this.props.selectedBandNumber === item}/>
     })
     return (
-      <form>
+      <form id="band-number-menu">
         {bandNumberButtonList}
         <ResetButton onReset={this.props.onReset}/>
       </form>

@@ -21571,11 +21571,11 @@
 
 	var _bandNumberMenu2 = _interopRequireDefault(_bandNumberMenu);
 
-	var _resistor = __webpack_require__(181);
+	var _resistor = __webpack_require__(182);
 
 	var _resistor2 = _interopRequireDefault(_resistor);
 
-	var _calculations = __webpack_require__(189);
+	var _calculations = __webpack_require__(190);
 
 	var _calculations2 = _interopRequireDefault(_calculations);
 
@@ -21703,7 +21703,7 @@
 
 	var _bandNumberButton2 = _interopRequireDefault(_bandNumberButton);
 
-	var _resetButton = __webpack_require__(191);
+	var _resetButton = __webpack_require__(181);
 
 	var _resetButton2 = _interopRequireDefault(_resetButton);
 
@@ -21734,7 +21734,7 @@
 	      });
 	      return _react2.default.createElement(
 	        "form",
-	        null,
+	        { id: "band-number-menu" },
 	        bandNumberButtonList,
 	        _react2.default.createElement(_resetButton2.default, { onReset: this.props.onReset })
 	      );
@@ -21787,12 +21787,14 @@
 	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "label",
+	        "div",
 	        null,
-	        _react2.default.createElement("input", { type: "radio", value: this.props.bandNumber, onChange: this.props.onChange, checked: this.props.checked }),
-	        " ",
-	        this.props.bandNumber + " ",
-	        "bands"
+	        _react2.default.createElement("input", { type: "radio", value: this.props.bandNumber, onChange: this.props.onChange, checked: this.props.checked, id: this.props.bandNumber }),
+	        _react2.default.createElement(
+	          "label",
+	          { htmlFor: this.props.bandNumber },
+	          this.props.bandNumber + " bands"
+	        )
 	      );
 	    }
 	  }]);
@@ -21822,31 +21824,84 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _band = __webpack_require__(182);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ResetButton = function (_React$Component) {
+	  _inherits(ResetButton, _React$Component);
+
+	  function ResetButton(props) {
+	    _classCallCheck(this, ResetButton);
+
+	    return _possibleConstructorReturn(this, (ResetButton.__proto__ || Object.getPrototypeOf(ResetButton)).call(this, props));
+	  }
+
+	  _createClass(ResetButton, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "button",
+	        { type: "button", onClick: this.props.onReset },
+	        "Reset"
+	      );
+	    }
+	  }]);
+
+	  return ResetButton;
+	}(_react2.default.Component);
+
+	exports.default = ResetButton;
+
+/***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(32);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _band = __webpack_require__(183);
 
 	var _band2 = _interopRequireDefault(_band);
 
-	var _band3 = __webpack_require__(184);
+	var _band3 = __webpack_require__(185);
 
 	var _band4 = _interopRequireDefault(_band3);
 
-	var _band5 = __webpack_require__(185);
+	var _band5 = __webpack_require__(186);
 
 	var _band6 = _interopRequireDefault(_band5);
 
-	var _band7 = __webpack_require__(186);
+	var _band7 = __webpack_require__(187);
 
 	var _band8 = _interopRequireDefault(_band7);
 
-	var _band9 = __webpack_require__(187);
+	var _band9 = __webpack_require__(188);
 
 	var _band10 = _interopRequireDefault(_band9);
 
-	var _band11 = __webpack_require__(188);
+	var _band11 = __webpack_require__(189);
 
 	var _band12 = _interopRequireDefault(_band11);
 
-	var _bandColorMenu = __webpack_require__(183);
+	var _bandColorMenu = __webpack_require__(184);
 
 	var _bandColorMenu2 = _interopRequireDefault(_bandColorMenu);
 
@@ -21946,7 +22001,8 @@
 	              _react2.default.createElement("rect", { width: "1000", height: "1000", fill: "url(#silver-2)" }),
 	              _react2.default.createElement("rect", { width: "1000", height: "1000", fill: "url(#silver-3)" }),
 	              _react2.default.createElement("rect", { width: "1000", height: "1000", fill: "url(#silver-4)" })
-	            )
+	            ),
+	            _react2.default.createElement("rect", { width: "2000", height: "2000", fill: "url(#gold-glitter)", id: "gold-glitter-box" })
 	          ),
 	          _react2.default.createElement("path", { id: "resistor-body", d: "m527 66.051c-18.737-1.2999-26.612-3.2618-30-10-3.3877-6.7382-3.5105-8.6876-4-20-0.49-11.313-16.07-31.102-28-36h-56c-11.996-0.0696-14.194 11.238-34 12 0 0-224.36-0.35714-224 0-18.377-0.60026-21.004-12.07-33-12h-56c-11.925 4.8977-27.51 24.687-28 36-0.48954 11.312-0.61231 13.594-4 20.332-3.3877 6.7382-11.263 8.368-30 9.668v40c18.737 1.2999 26.612 1.2618 30 8 3.3877 6.7382 3.5105 8.6876 4 20 0.48953 11.312 16.075 31.102 28 36h56c11.996 0.0696 14.623-11.4 33-12-0.35715 0.35714 224-0.1 224-0.1 19.764 0.42886 22.004 12.17 34 12.1h56c11.925-4.898 27.51-24.688 28-36 0.48953-11.312 0.61231-13.262 4-20 3.3877-6.7382 11.263-6.7001 30-8z" }),
 	          _react2.default.createElement(_band2.default, { bandColor: this.props.bandColors.band1, resistorDecoderInfo: this.props.resistorDecoderInfo, selectedBandNumber: this.props.selectedBandNumber, onBandClick: this.props.onBandClick, bandClicked: this.props.bandClicked }),
@@ -21967,7 +22023,7 @@
 	exports.default = ResistorTrial;
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21986,7 +22042,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _bandColorMenu = __webpack_require__(183);
+	var _bandColorMenu = __webpack_require__(184);
 
 	var _bandColorMenu2 = _interopRequireDefault(_bandColorMenu);
 
@@ -22020,7 +22076,7 @@
 	exports.default = Band1;
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22061,16 +22117,18 @@
 	    value: function render() {
 	      var _this2 = this;
 
-	      /* Band specified for testing */
 	      var thisBandMeaning = this.props.resistorDecoderInfo.bandMeanings[this.props.selectedBandNumber][this.props.bandClicked];
 	      var colorOptionList = Object.getOwnPropertyNames(this.props.resistorDecoderInfo.bandColorCode[thisBandMeaning]);
 	      var colorOptionListMarkup = colorOptionList.map(function (item, index) {
 	        return _react2.default.createElement(
-	          "label",
-	          { key: item, className: "color-menu-options" },
+	          "div",
+	          { key: item, className: item + "-label" },
 	          _react2.default.createElement("input", { type: "radio", id: item, onChange: _this2.props.onColorClick, checked: _this2.props.bandColors[_this2.props.bandClicked] == item }),
-	          " ",
-	          item
+	          _react2.default.createElement(
+	            "label",
+	            { className: "color-menu-options", htmlFor: item },
+	            item
+	          )
 	        );
 	      });
 
@@ -22088,7 +22146,7 @@
 	exports.default = BandColorMenu;
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22137,7 +22195,7 @@
 	exports.default = Band2;
 
 /***/ },
-/* 185 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22186,7 +22244,7 @@
 	exports.default = Band3;
 
 /***/ },
-/* 186 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22235,7 +22293,7 @@
 	exports.default = Band4;
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22284,7 +22342,7 @@
 	exports.default = Band5;
 
 /***/ },
-/* 188 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22333,7 +22391,7 @@
 	exports.default = Band6;
 
 /***/ },
-/* 189 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22352,7 +22410,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _calcBox = __webpack_require__(190);
+	var _calcBox = __webpack_require__(191);
 
 	var _calcBox2 = _interopRequireDefault(_calcBox);
 
@@ -22432,7 +22490,7 @@
 	exports.default = Calculations;
 
 /***/ },
-/* 190 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22523,59 +22581,6 @@
 	}(_react2.default.Component);
 
 	exports.default = CalcBox;
-
-/***/ },
-/* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(32);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ResetButton = function (_React$Component) {
-	  _inherits(ResetButton, _React$Component);
-
-	  function ResetButton(props) {
-	    _classCallCheck(this, ResetButton);
-
-	    return _possibleConstructorReturn(this, (ResetButton.__proto__ || Object.getPrototypeOf(ResetButton)).call(this, props));
-	  }
-
-	  _createClass(ResetButton, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "button",
-	        { type: "button", onClick: this.props.onReset },
-	        "Reset"
-	      );
-	    }
-	  }]);
-
-	  return ResetButton;
-	}(_react2.default.Component);
-
-	exports.default = ResetButton;
 
 /***/ },
 /* 192 */

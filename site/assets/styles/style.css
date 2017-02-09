@@ -57,6 +57,32 @@ input[type=radio]:checked + label:before {
   #band-color-menu div {
     border: 2px solid white;
     margin: 0.125em 0; }
+  #band-color-menu .black {
+    background-color: #161619; }
+  #band-color-menu .brown {
+    background-color: #4C231F; }
+  #band-color-menu .red {
+    background-color: #A71E25; }
+  #band-color-menu .orange {
+    background-color: #DB5C24; }
+  #band-color-menu .yellow {
+    background-color: #E7C735; }
+  #band-color-menu .green {
+    background-color: #307D4F; }
+  #band-color-menu .blue {
+    background-color: #17467C; }
+  #band-color-menu .violet {
+    background-color: #6A2C6A; }
+  #band-color-menu .grey {
+    background-color: #77737F; }
+  #band-color-menu .white {
+    background-color: #DCD4D1; }
+  #band-color-menu .gold {
+    background-image: url(/assets/patterns.svg/#gold-glitter);
+    background-size: contain;
+    background-repeat: repeat; }
+  #band-color-menu .silver {
+    background-image: url("#silver-glitter"); }
 
 /* Position each Band Color Menu to the right of the band it controls */
 #band-color-menu.band1 {
@@ -124,42 +150,6 @@ button {
 
 .silver {
   fill: url("#silver-glitter"); }
-
-.black-label {
-  background-color: #161619; }
-
-.brown-label {
-  background-color: #4C231F; }
-
-.red-label {
-  background-color: #A71E25; }
-
-.orange-label {
-  background-color: #DB5C24; }
-
-.yellow-label {
-  background-color: #E7C735; }
-
-.green-label {
-  background-color: #307D4F; }
-
-.blue-label {
-  background-color: #17467C; }
-
-.violet-label {
-  background-color: #6A2C6A; }
-
-.grey-label {
-  background-color: #77737F; }
-
-.white-label {
-  background-color: #DCD4D1; }
-
-.gold-label {
-  background-image: url("#gold-glitter-box"); }
-
-.silver-label {
-  background-image: url("/assets/images/patterns.svg#silver-glitter"); }
 
 /* Calc Box styles */
 .calc-boxes {

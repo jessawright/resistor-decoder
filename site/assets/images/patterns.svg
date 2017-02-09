@@ -1,25 +1,27 @@
-
 <svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+
 	<defs>
+		<link href="/assets/styles/style.css" type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml"/>
+
 		<pattern id="blank-band" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(315)">
-			<rect x="0" y="0" width="8" height="8" fill="#555" />
-			<rect x="0" y="0" width="4" height="8" stroke="none" fill="#222" />
+			<rect x="0" y="0" width="8" height="8" fill="#555"/>
+			<rect x="0" y="0" width="4" height="8" stroke="none" fill="#222"/>
 		</pattern>
 		<rect id="a" x="0" y="0" width="2" height="2"/>
 		<rect id="b" x="2" y="2" width="2" height="2"/>
 		<rect id="c" x="0" y="0" width="1" height="1"/>
 		<rect id="d" x="0" y="0" width="1" height="1"/>
 		<pattern id="gold-1" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-			<use xlink:href="#a" fill="#d0ac60"/>
+			<use xlinkHref="#a" fill="#d0ac60"/>
 		</pattern>
 		<pattern id="gold-2" x="2" y="0" width="12" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
-			<use xlink:href="#b" fill="#d7b667"/>
+			<use xlinkHref="#b" fill="#d7b667"/>
 		</pattern>
 		<pattern id="gold-3" x="0" y="3" width="8" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(330)">
-			<use xlink:href="#c" fill="#e0ca84"/>
+			<use xlinkHref="#c" fill="#e0ca84"/>
 		</pattern>
 		<pattern id="gold-4" x="0" y="4" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(315)">
-			<use xlink:href="#d" fill="#ddc47c"/>
+			<use xlinkHref="#d" fill="#ddc47c"/>
 		</pattern>
 		<pattern id="gold-glitter" width="1000" height="1000" patternUnits="userSpaceOnUse">
 			<rect width="1000" height="1000" fill="#CBA254"/>
@@ -30,16 +32,16 @@
 		</pattern>
 
 		<pattern id="silver-1" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-			<use xlink:href="#a" fill="#b5b5bf"/>
+			<use xlinkHref="#a" fill="#b5b5bf"/>
 		</pattern>
 		<pattern id="silver-2" x="2" y="0" width="12" height="15" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
-			<use xlink:href="#b" fill="#c4c3c1"/>
+			<use xlinkHref="#b" fill="#c4c3c1"/>
 		</pattern>
 		<pattern id="silver-3" x="0" y="3" width="8" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(330)">
-			<use xlink:href="#c" fill="#bdbec1"/>
+			<use xlinkHref="#c" fill="#bdbec1"/>
 		</pattern>
 		<pattern id="silver-4" x="0" y="4" width="7" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(315)">
-			<use xlink:href="#d" fill="#c1c2c7"/>
+			<use xlinkHref="#d" fill="#c1c2c7"/>
 		</pattern>
 		<pattern id="silver-glitter" width="1000" height="1000" patternUnits="userSpaceOnUse">
 			<rect width="1000" height="1000" fill="#A8AAAD"/>
@@ -50,6 +52,6 @@
 		</pattern>
 
 	</defs>
-
+	
 
 </svg>
