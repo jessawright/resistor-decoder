@@ -87,7 +87,7 @@ button {
 
 /* Color the resistor bands */
 .blank {
-  fill: url("#blank-band"); }
+  fill: url(#blank-band); }
 
 .black {
   fill: #161619; }
@@ -120,10 +120,10 @@ button {
   fill: #DCD4D1; }
 
 .gold {
-  fill: url("#gold-glitter"); }
+  fill: url(#gold-glitter); }
 
 .silver {
-  fill: url("#silver-glitter"); }
+  fill: url(#silver-glitter); }
 
 .black-label {
   background-color: #161619; }
@@ -156,10 +156,10 @@ button {
   background-color: #DCD4D1; }
 
 .gold-label {
-  background-image: url("#gold-glitter-box"); }
+  background: url("/images/egg-shell.png") #CBA254; }
 
 .silver-label {
-  background-image: url("/assets/images/patterns.svg#silver-glitter"); }
+  background: url("/images/egg-shell.png") #A8AAAD; }
 
 /* Calc Box styles */
 .calc-boxes {
