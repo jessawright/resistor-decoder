@@ -1,4 +1,5 @@
 /* Resistor colors taken from resistor photos */
+$blank-band: url(#blank-band);
 $black-band: #161619;
 $brown-band: #4C231F;
 $red-band: #A71E25;
@@ -9,8 +10,8 @@ $blue-band: #17467C;
 $violet-band: #6A2C6A;
 $grey-band: #77737F;
 $white-band: #DCD4D1;
-$gold-band: url("#gold-glitter");
-$silver-band: url("#silver-glitter");
+$gold-band: url(#gold-glitter);
+$silver-band: url(#silver-glitter);
 $tan-body: #E8C599;
 $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
@@ -125,7 +126,7 @@ button {
 }
 /* Color the resistor bands */
 .blank {
-    fill: url("#blank-band");
+    fill: $blank-band;
 }
 
 .black {
@@ -217,11 +218,11 @@ button {
 }
 
 .gold-label {
-    background-image: url("#gold-glitter-box");
+    background: url("/images/egg-shell.png") #CBA254;
 }
 
 .silver-label {
-    background-image: url("/assets/images/patterns.svg#silver-glitter");
+    background: url("/images/egg-shell.png") #A8AAAD;
 }
 /* Calc Box styles */
 .calc-boxes {
