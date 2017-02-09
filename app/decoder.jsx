@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import BandNumberMenu from './band-number-menu.jsx';
 import Resistor from './resistor.jsx';
 import Calculations from './calculations.jsx';
-import ResetButton from './reset-button.jsx';
+
 
 class Decoder extends React.Component {
 
@@ -43,6 +43,7 @@ class Decoder extends React.Component {
   };
   handleResetClick(event) {
     this.setState({
+      selectedBandNumber: this.props.resistorDecoderInfo.bandNumberOptions[0],
       bandColors: {
         'band1': 'blank',
         'band2': 'blank',
@@ -71,11 +72,9 @@ class Decoder extends React.Component {
 
     return (
       <div>
-        <BandNumberMenu bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberChange}/>
-        <ResetButton onReset={this.handleResetClick}/>
+        <BandNumberMenu bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberChange} onReset={this.handleResetClick}/>
         <Resistor selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors} resistorDecoderInfo={this.props.resistorDecoderInfo} onBandClick={this.handleBandClick} bandClicked={this.state.bandClicked} onColorClick={this.handleColorClick}/>
-
-      <Calculations selectedBandNumber={this.state.selectedBandNumber} resistorDecoderInfo={this.props.resistorDecoderInfo}  bandColors={this.state.bandColors}/>
+        <Calculations selectedBandNumber={this.state.selectedBandNumber} resistorDecoderInfo={this.props.resistorDecoderInfo}  bandColors={this.state.bandColors}/>
 
       </div>
     )

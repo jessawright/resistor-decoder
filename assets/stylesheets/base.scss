@@ -10,18 +10,21 @@ $violet-band: #6A2C6A;
 $grey-band: #77737F;
 $white-band: #DCD4D1;
 $gold-band: #CBA254;
-
-
 $silver-band: #A8AAAD;
-
 $tan-body: #E8C599;
 $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
-$wire: #BCB8B0;
-/* add pcb-green and pcb-gold? */
+/* wire and solder */
+$metal: #BCB8B0;
+$pcb-green: #167851;
+$pcb-gold: #d6bc71;
+$red-led-off: red;
+$red-led-on: yellow;
+
 body {
-    background-color: white;
+    background-color: $pcb-green;
+    color: $pcb-gold;
 }
 
 #resistor-body {
@@ -34,8 +37,25 @@ body {
     width: fit-content;
 }
 
+/* Restyle the radio buttons */
+
+input[type=radio] {
+  display: none;
+}
+
+
+label {
+
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+
+}
+
+/* Band Color Menu styles */
 #band-color-menu {
-    background-color: white;
+    background-color: $pcb-green;
     border: 2px solid black;
     width: fit-content;
     padding: 0.5rem;
@@ -44,6 +64,7 @@ body {
     transform: translateY(-50%);
 }
 
+/* Position each Band Color Menu to the right of the band it controls */
 #band-color-menu.band1 {
     left: 19.7%;
 }
@@ -72,6 +93,11 @@ body {
     display: block;
 }
 
+/* Indicate that these are clickable */
+.resistor-band, button {
+  cursor: pointer;
+}
+/* Color the resistor bands */
 .blank {
     fill: url("#blank-band");
 }
@@ -123,15 +149,22 @@ body {
 .silver {
     fill: url("#silver-glitter");
 }
-
+/* Calc Box styles */
 .calc-boxes {
     list-style: none;
+    margin: 0;
+    padding: 0;
 
     .calc-box {
-        display: inline-block;
-        margin: 0.5rem;
-        padding: 0.25rem;
+
+        padding: 0.25em;
         border: 2px solid black;
-        min-width: 7em;
+        min-width: 5em;
+        height: 1em;
+    }
+    .calc-list-entry {
+      display: inline-block;
+      padding: .25rem;
+      margin: 0.25rem;
     }
 }

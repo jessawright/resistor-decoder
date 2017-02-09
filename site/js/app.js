@@ -21579,10 +21579,6 @@
 
 	var _calculations2 = _interopRequireDefault(_calculations);
 
-	var _resetButton = __webpack_require__(191);
-
-	var _resetButton2 = _interopRequireDefault(_resetButton);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21638,6 +21634,7 @@
 	    key: "handleResetClick",
 	    value: function handleResetClick(event) {
 	      this.setState({
+	        selectedBandNumber: this.props.resistorDecoderInfo.bandNumberOptions[0],
 	        bandColors: {
 	          'band1': 'blank',
 	          'band2': 'blank',
@@ -21670,8 +21667,7 @@
 	      return _react2.default.createElement(
 	        "div",
 	        null,
-	        _react2.default.createElement(_bandNumberMenu2.default, { bandNumberOptions: this.props.resistorDecoderInfo.bandNumberOptions, selectedBandNumber: this.state.selectedBandNumber, onChange: this.handleBandNumberChange }),
-	        _react2.default.createElement(_resetButton2.default, { onReset: this.handleResetClick }),
+	        _react2.default.createElement(_bandNumberMenu2.default, { bandNumberOptions: this.props.resistorDecoderInfo.bandNumberOptions, selectedBandNumber: this.state.selectedBandNumber, onChange: this.handleBandNumberChange, onReset: this.handleResetClick }),
 	        _react2.default.createElement(_resistor2.default, { selectedBandNumber: this.state.selectedBandNumber, bandColors: this.state.bandColors, resistorDecoderInfo: this.props.resistorDecoderInfo, onBandClick: this.handleBandClick, bandClicked: this.state.bandClicked, onColorClick: this.handleColorClick }),
 	        _react2.default.createElement(_calculations2.default, { selectedBandNumber: this.state.selectedBandNumber, resistorDecoderInfo: this.props.resistorDecoderInfo, bandColors: this.state.bandColors })
 	      );
@@ -21707,6 +21703,10 @@
 
 	var _bandNumberButton2 = _interopRequireDefault(_bandNumberButton);
 
+	var _resetButton = __webpack_require__(191);
+
+	var _resetButton2 = _interopRequireDefault(_resetButton);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21735,7 +21735,8 @@
 	      return _react2.default.createElement(
 	        "form",
 	        null,
-	        bandNumberButtonList
+	        bandNumberButtonList,
+	        _react2.default.createElement(_resetButton2.default, { onReset: this.props.onReset })
 	      );
 	    }
 	  }]);
@@ -22009,7 +22010,7 @@
 	  _createClass(Band1, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band1", className: this.props.bandColor, onClick: this.props.onBandClick, d: "m74.05 0.049894v170h29.9v-170h-29.9z" });
+	      return _react2.default.createElement("path", { id: "band1", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m74.05 0.049894v170h29.9v-170h-29.9z" });
 	    }
 	  }]);
 
@@ -22126,7 +22127,7 @@
 	  _createClass(Band2, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band2", className: this.props.bandColor, onClick: this.props.onBandClick, d: "m139.05 9.6007v150.9c3.1672-1.3136 6.9686-2.2885 11.95-2.4512-0.0595 0.0595 7.6124 0.0911 17.95 0.11133v-146.23c-10.338 0.0248-18.01 0.0577-17.95 0.11719-4.9814-0.1627-8.7828-1.1357-11.95-2.4492z" });
+	      return _react2.default.createElement("path", { id: "band2", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m139.05 9.6007v150.9c3.1672-1.3136 6.9686-2.2885 11.95-2.4512-0.0595 0.0595 7.6124 0.0911 17.95 0.11133v-146.23c-10.338 0.0248-18.01 0.0577-17.95 0.11719-4.9814-0.1627-8.7828-1.1357-11.95-2.4492z" });
 	    }
 	  }]);
 
@@ -22175,7 +22176,7 @@
 	  _createClass(Band3, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band3", className: this.props.bandColor, onClick: this.props.onBandClick, d: "m204.05 11.903v146.27c9.2862-0.002 19.413-0.0123 29.908-0.0215v-146.24c-10.495-0.005-20.622-0.01-29.908-0.008z" });
+	      return _react2.default.createElement("path", { id: "band3", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m204.05 11.903v146.27c9.2862-0.002 19.413-0.0123 29.908-0.0215v-146.24c-10.495-0.005-20.622-0.01-29.908-0.008z" });
 	    }
 	  }]);
 
@@ -22224,7 +22225,7 @@
 	  _createClass(Band4, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band4", visibility: this.props.visibility, className: this.props.bandColor, onClick: this.props.onBandClick, d: "m269.05 11.925v146.2c14.9-0.0198 16.498-0.027 29.9-0.0488v-146.12c-13.402-0.0159-15-0.022-29.9-0.0352z" });
+	      return _react2.default.createElement("path", { id: "band4", visibility: this.props.visibility, className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m269.05 11.925v146.2c14.9-0.0198 16.498-0.027 29.9-0.0488v-146.12c-13.402-0.0159-15-0.022-29.9-0.0352z" });
 	    }
 	  }]);
 
@@ -22273,7 +22274,7 @@
 	  _createClass(Band5, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band5", visibility: this.props.visibility, className: this.props.bandColor, onClick: this.props.onBandClick, d: "m334.05 12.001v146.02c8.9272-0.0166 27.098-0.0432 29.9-0.0488v-145.93c-2.8024-0.004-20.973-0.0225-29.9-0.0352z" });
+	      return _react2.default.createElement("path", { id: "band5", visibility: this.props.visibility, className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m334.05 12.001v146.02c8.9272-0.0166 27.098-0.0432 29.9-0.0488v-145.93c-2.8024-0.004-20.973-0.0225-29.9-0.0352z" });
 	    }
 	  }]);
 
@@ -22322,7 +22323,7 @@
 	  _createClass(Band6, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band6", className: this.props.bandColor, onClick: this.props.onBandClick, d: "m414.05 0.049892v170h49.898v-170h-49.898z" });
+	      return _react2.default.createElement("path", { id: "band6", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m414.05 0.049892v170h49.898v-170h-49.898z" });
 	    }
 	  }]);
 
@@ -22417,10 +22418,9 @@
 	        _react2.default.createElement(
 	          'ul',
 	          { className: 'calc-boxes' },
-	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'digit-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors }),
-	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tolerance-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors }),
-	          ' ',
-	          this.props.selectedBandNumber === '6' ? _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tempCoefficient-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors }) : ''
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'digit-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Resistance' }),
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tolerance-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Tolerance' }),
+	          this.props.selectedBandNumber === '6' ? _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tempCoefficient-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Temperature Coefficient' }) : ''
 	        )
 	      );
 	    }
@@ -22488,10 +22488,10 @@
 	            };
 	            break;
 	          case 'tolerance-box':
-	            boxContent = decodedResistor['tolerance'] + ' ' + units['tolerance'];
+	            boxContent = decodedResistor['tolerance'] + units['tolerance'];
 	            break;
 	          case 'tempCoefficient-box':
-	            boxContent = decodedResistor['tempCoefficient'] + ' ' + units['tempCoefficient'];
+	            boxContent = decodedResistor['tempCoefficient'] + units['tempCoefficient'];
 	            break;
 	        }
 	      };
@@ -22502,8 +22502,19 @@
 
 	      return _react2.default.createElement(
 	        'li',
-	        { className: 'calc-box', id: id },
-	        boxContent
+	        { className: 'calc-list-entry' },
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'calc-label' },
+	          this.props.calcLabel,
+	          ' '
+	        ),
+	        ' ',
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'calc-box', id: id },
+	          boxContent
+	        )
 	      );
 	    }
 	  }]);

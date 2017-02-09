@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import BandNumberButton from './band-number-button.jsx';
+import ResetButton from './reset-button.jsx';
 
 class BandNumberMenu extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class BandNumberMenu extends React.Component {
     return (
       <form>
         {bandNumberButtonList}
+        <ResetButton onReset={this.props.onReset}/>
       </form>
     );
 

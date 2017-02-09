@@ -45,9 +45,10 @@ class Calculations extends React.Component {
       <div>
         <h2>Resistor Value</h2>
         <ul className='calc-boxes'>
-          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="digit-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors}/>
-          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tolerance-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors}/> {this.props.selectedBandNumber === '6'
-            ? <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tempCoefficient-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors}/>
+          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="digit-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="Resistance"/>
+          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tolerance-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="Tolerance"/>
+          {this.props.selectedBandNumber === '6'
+            ? <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tempCoefficient-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="Temperature Coefficient"/>
             : ''}
         </ul>
       </div>
