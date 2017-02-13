@@ -19,29 +19,6 @@ var webpackSettings = {
   }, {
    test: /\.scss$/,
    loader: ExtractTextPlugin.extract('css!sass')
-  }, {
-   test: /\.svg$/,
-   use: [{
-     loader: 'file-loader'
-    },
-    {
-     loader: 'svgo-loader',
-     options: {
-      plugins: [{
-        removeTitle: true
-       },
-       {
-        convertColors: {
-         shorthex: false
-        }
-       },
-       {
-        convertPathData: false
-       }
-      ]
-     }
-    }
-   ]
   }]
 
  },

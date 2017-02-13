@@ -15,13 +15,19 @@ The general goal of this app is to start with a "blank" resistor, then allow the
 
 
 ## Possible enhancements
-* More thorough responsiveness.
+* Thorough responsiveness.
 * Calculations for current input and output based on the calculated resistance.
 * Displaying other information:
     * Where the calculated resistor is in terms of the E series.
     * Other units for the resistance.
     * Other abbreviations for the calculated resistance.
 * Allowing for reverse calculation (the user enters resistance and the app displays the colored bands from that).
+
+
+### Credits
+* Metallic texture PNG: Eggshell by Paul Phönixweiß via [Transparent Textures](https://www.transparenttextures.com/).
+* PCB printing font: [osifont](https://github.com/hikikomori82/osifont).
+* LCD font: .
 
 
 ##### Pushing just `site` to `gh-pages`

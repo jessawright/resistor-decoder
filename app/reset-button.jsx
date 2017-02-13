@@ -11,7 +11,7 @@ class ResetButton extends React.Component {
 
 
   render() {
-    return (<button type='button' onClick={this.props.onReset}>Reset</button>);
+    return (<button type='button' onClick={this.props.onReset}>RESET</button>);
   }
 }
 

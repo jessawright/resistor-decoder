@@ -8,10 +8,10 @@ class BandNumberButton extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="band-number-button">
         <input type="radio" value={this.props.bandNumber} onChange={this.props.onChange} checked={this.props.checked} id={this.props.bandNumber}/>
         <label htmlFor={this.props.bandNumber}>
-          {this.props.bandNumber + " bands"}
+          {this.props.bandNumber + " BANDS"}
         </label>
       </div>
     );

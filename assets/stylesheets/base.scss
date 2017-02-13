@@ -1,5 +1,5 @@
 /* Resistor colors taken from resistor photos */
-$blank-band: url(#blank-band);
+$blank-band: url("#blank-band");
 $black-band: #161619;
 $brown-band: #4C231F;
 $red-band: #A71E25;
@@ -10,22 +10,34 @@ $blue-band: #17467C;
 $violet-band: #6A2C6A;
 $grey-band: #77737F;
 $white-band: #DCD4D1;
-$gold-band: url(#gold-glitter);
-$silver-band: url(#silver-glitter);
+$gold-band: url("#gold-glitter");
+$silver-band: url("#silver-glitter");
 $tan-body: #E8C599;
 $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
 /* wire and solder */
 $metal: #BCB8B0;
-$pcb-green: #167851;
+$pcb-green: #0d913d;
 $pcb-gold: #d6bc71;
 $red-led-off: #fa1915;
 $red-led-on: yellow;
+$pcb-printing: rgba(255, 255, 255, .9);
+
+@font-face {
+    font-family: 'osifont';
+    src: url('/assets/fonts/osifont-webfont.woff2') format('woff2'),
+         url('/assets/fonts/osifont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+$pcb-font: sans-serif;
 
 body {
     background-color: $pcb-green;
-    color: $pcb-gold;
+    color: $pcb-printing;
+    font-family: 'osifont';
 }
 
 #resistor-body {
@@ -35,7 +47,8 @@ body {
 .container {
     position: relative;
     width: fit-content;
-    color: white;
+    color: $pcb-printing;
+    border: 2px solid $pcb-printing;
 }
 /* Restyle the radio buttons */
 input[type=radio] {
@@ -46,9 +59,9 @@ input[type=radio] {
 label {
     cursor: pointer;
     position: relative;
-    padding: 0.1em 0.25em 0.1em 1.8em;
+    padding: 0 0 0 1.4em;
     font-size: 1.25rem;
-    color: white;
+    color: $pcb-printing;
 }
 
 label:before {
@@ -57,29 +70,48 @@ label:before {
     width: 0.8em;
     height: 0.8em;
     position: absolute;
-    left: 0.5em;
+    left: 0.3em;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
+
     background-color: $red-led-off;
 }
 
 input[type=radio]:checked + label:before {
-    background-image: radial-gradient(circle, #ffffff 0%, #fefe71 10%, $red-led-off 75%);
-    box-shadow: 0 0 0.5em $red-led-off;
+    background-image: radial-gradient(circle, #ffffff 0%, #fefe71 10%, $red-led-off 65%);
+    box-shadow: 0 0 1em white, 0 0 1.2em $red-led-off;
 }
 
-#band-number-menu {
-    margin: 0 0 2em;
 
-    div {
-        display: inline-block;
-    }
+
+
+#band-number-menu > button {
+  background-color: inherit;
+  border: 2px solid $pcb-printing;
+  color: $pcb-printing;
+  outline: none;
+  font-size: 1.25rem;
+  font-family: 'osifont';
+  padding: .3em;
+  margin: .3rem;
+  box-sizing: border-box;
+
+}
+
+.band-number-button {
+    border: 2px solid $pcb-printing;
+    padding:  .3em .3em .3em 0;
+    display: inline-block;
+    margin: .3rem;
+    box-sizing: border-box;
+    font-size: 1.25rem;
 }
 /* Band Color Menu styles */
 #band-color-menu {
     background-color: $pcb-green;
     border: 2px solid black;
+    box-shadow: 0 0 0.5em black;
     width: fit-content;
     padding: 0.5rem;
     position: absolute;
@@ -87,7 +119,7 @@ input[type=radio]:checked + label:before {
     transform: translateY(-50%);
 
     div {
-        border: 2px solid white;
+        border: 2px solid $pcb-printing;
         margin: 0.125em 0;
     }
 }
@@ -185,7 +217,7 @@ button {
     background-color: $brown-band;
 }
 
- .red-label {
+.red-label {
     background-color: $red-band;
 }
 
@@ -218,11 +250,11 @@ button {
 }
 
 .gold-label {
-    background: url("/images/egg-shell.png") #CBA254;
+    background: url("/assets/images/egg-shell.png") #CBA254;
 }
 
 .silver-label {
-    background: url("/images/egg-shell.png") #A8AAAD;
+    background: url("/assets/images/egg-shell.png") #A8AAAD;
 }
 /* Calc Box styles */
 .calc-boxes {
