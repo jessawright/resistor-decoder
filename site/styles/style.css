@@ -15,6 +15,12 @@ body {
 #resistor-body {
   fill: #E8C599; }
 
+#wire {
+  fill: #BCB8B0; }
+
+#through-hole-1, #through-hole-2 {
+  fill: #d6bc71; }
+
 .container {
   position: relative;
   width: fit-content;
@@ -72,22 +78,22 @@ input[type=radio]:checked + label:before {
 
 /* Position each Band Color Menu to the right of the band it controls */
 #band-color-menu.band1 {
-  left: 19.7%; }
+  left: 28.6%; }
 
 #band-color-menu.band2 {
-  left: 32.1%; }
+  left: 37.5%; }
 
 #band-color-menu.band3 {
-  left: 44.4%; }
+  left: 46.4%; }
 
 #band-color-menu.band4 {
-  left: 56.7%; }
+  left: 55.3%; }
 
 #band-color-menu.band5 {
-  left: 69.1%; }
+  left: 64.2%; }
 
 #band-color-menu.band6 {
-  left: 88.0%; }
+  left: 77.9%; }
 
 .color-menu-options {
   display: block; }
