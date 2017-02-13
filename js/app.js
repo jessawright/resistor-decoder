@@ -22072,7 +22072,7 @@
 	      var colorOptionListMarkup = colorOptionList.map(function (item, index) {
 	        return _react2.default.createElement(
 	          "div",
-	          { key: item, className: item + "-label" },
+	          { key: item, className: item + "-label band-color-button" },
 	          _react2.default.createElement("input", { type: "radio", id: item, onChange: _this2.props.onColorClick, checked: _this2.props.bandColors[_this2.props.bandClicked] == item }),
 	          _react2.default.createElement(
 	            "label",
