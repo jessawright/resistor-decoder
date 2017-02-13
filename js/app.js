@@ -21930,7 +21930,7 @@
 	        { className: "container" },
 	        _react2.default.createElement(
 	          "svg",
-	          { height: "170.0998", width: "526.99999", viewBox: "0 0 526.99999 170.0998" },
+	          { height: "170", width: "730.65", viewBox: "0 0 730.64934 170.00143" },
 	          _react2.default.createElement(
 	            "defs",
 	            null,
@@ -21954,7 +21954,16 @@
 	              _react2.default.createElement("use", { xlinkHref: "#glitter-texture" })
 	            )
 	          ),
-	          _react2.default.createElement("path", { id: "resistor-body", d: "m527 66.051c-18.737-1.2999-26.612-3.2618-30-10-3.3877-6.7382-3.5105-8.6876-4-20-0.49-11.313-16.07-31.102-28-36h-56c-11.996-0.0696-14.194 11.238-34 12 0 0-224.36-0.35714-224 0-18.377-0.60026-21.004-12.07-33-12h-56c-11.925 4.8977-27.51 24.687-28 36-0.48954 11.312-0.61231 13.594-4 20.332-3.3877 6.7382-11.263 8.368-30 9.668v40c18.737 1.2999 26.612 1.2618 30 8 3.3877 6.7382 3.5105 8.6876 4 20 0.48953 11.312 16.075 31.102 28 36h56c11.996 0.0696 14.623-11.4 33-12-0.35715 0.35714 224-0.1 224-0.1 19.764 0.42886 22.004 12.17 34 12.1h56c11.925-4.898 27.51-24.688 28-36 0.48953-11.312 0.61231-13.262 4-20 3.3877-6.7382 11.263-6.7001 30-8z" }),
+	          _react2.default.createElement("path", {
+	            id: "through-hole-1",
+	            d: "m29.999 56.047c-16.544 0.00025-29.955 13.411-29.955 29.955 0.000247 16.544 13.411 29.955 29.955 29.955 8.4952-0.0121 16.586-3.6307 22.258-9.9551h-22.285v-0.0293c-11.027-0.0151-19.958-8.9577-19.959-19.984 0.00005-11.027 8.9316-19.971 19.959-19.986h22.281c-5.6711-6.3233-13.76-9.9418-22.254-9.9551z" }),
+	          _react2.default.createElement("path", {
+	            id: "through-hole-2",
+	            d: "m700.65 56.075c16.544 0.00025 29.955 13.411 29.955 29.955-0.00025 16.544-13.411 29.955-29.955 29.955-8.4952-0.0121-16.586-3.6307-22.258-9.9551h22.285v-0.0293c11.027-0.0151 19.958-8.9577 19.959-19.984-0.00005-11.027-8.9316-19.971-19.959-19.986h-22.281c5.6711-6.3233 13.76-9.9418 22.254-9.9551z" }),
+	          _react2.default.createElement("path", { id: "wire", d: "m29.972 66.031c-11.027 0.0151-19.959 8.9589-19.959 19.986 0.001 11.027 8.9323 19.969 19.959 19.984v0.0293h670.53c11.027-0.0152 19.959-8.9589 19.959-19.986-0.001-11.027-8.9323-19.969-19.959-19.984v-0.0293z" }),
+	          _react2.default.createElement("path", {
+	            id: "resistor-body",
+	            d: "m632 66.001c-18.737-1.2999-26.612-3.2618-30-10-3.3877-6.7382-3.5105-8.6876-4-20-0.49-11.313-16.07-31.102-28-36h-56c-11.996-0.0696-14.194 11.238-34 12 0 0-224.36-0.35714-224 0-18.377-0.60026-21.004-12.07-33-12h-56c-11.925 4.8977-27.51 24.687-28 36-0.48954 11.312-0.61231 13.594-4 20.332-3.3877 6.7382-11.263 8.368-30 9.668v40c18.737 1.2999 26.612 1.2618 30 8 3.3877 6.7382 3.5105 8.6876 4 20 0.48953 11.312 16.075 31.102 28 36h56c11.996 0.0696 14.623-11.4 33-12-0.35715 0.35714 224-0.1 224-0.1 19.764 0.42886 22.004 12.17 34 12.1h56c11.925-4.898 27.51-24.688 28-36 0.48953-11.312 0.61231-13.262 4-20 3.3877-6.7382 11.263-6.7001 30-8z" }),
 	          _react2.default.createElement(_band2.default, { bandColor: this.props.bandColors.band1, resistorDecoderInfo: this.props.resistorDecoderInfo, selectedBandNumber: this.props.selectedBandNumber, onBandClick: this.props.onBandClick, bandClicked: this.props.bandClicked }),
 	          _react2.default.createElement(_band4.default, { bandColor: this.props.bandColors.band2, onBandClick: this.props.onBandClick }),
 	          _react2.default.createElement(_band6.default, { bandColor: this.props.bandColors.band3, onBandClick: this.props.onBandClick }),
@@ -22016,7 +22025,7 @@
 	  _createClass(Band1, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band1", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m74.05 0.049894v170h29.9v-170h-29.9z" });
+	      return _react2.default.createElement("path", { id: "band1", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m179.05 0v170h29.9v-170h-29.9z" });
 	    }
 	  }]);
 
@@ -22135,7 +22144,7 @@
 	  _createClass(Band2, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band2", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m139.05 9.6007v150.9c3.1672-1.3136 6.9686-2.2885 11.95-2.4512-0.0595 0.0595 7.6124 0.0911 17.95 0.11133v-146.23c-10.338 0.0248-18.01 0.0577-17.95 0.11719-4.9814-0.1627-8.7828-1.1357-11.95-2.4492z" });
+	      return _react2.default.createElement("path", { id: "band2", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m244.05 9.5508v150.9c3.1672-1.3136 6.9686-2.2885 11.95-2.4512-0.0595 0.0595 7.6124 0.0911 17.95 0.11133v-146.23c-10.338 0.0248-18.01 0.0577-17.95 0.11719-4.9814-0.1627-8.7828-1.1357-11.95-2.4492z" });
 	    }
 	  }]);
 
@@ -22184,7 +22193,7 @@
 	  _createClass(Band3, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band3", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m204.05 11.903v146.27c9.2862-0.002 19.413-0.0123 29.908-0.0215v-146.24c-10.495-0.005-20.622-0.01-29.908-0.008z" });
+	      return _react2.default.createElement("path", { id: "band3", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m309.05 11.853v146.27c9.2862-0.002 19.413-0.0123 29.908-0.0215v-146.24c-10.495-0.005-20.622-0.01-29.908-0.008z" });
 	    }
 	  }]);
 
@@ -22233,7 +22242,7 @@
 	  _createClass(Band4, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band4", visibility: this.props.visibility, className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m269.05 11.925v146.2c14.9-0.0198 16.498-0.027 29.9-0.0488v-146.12c-13.402-0.0159-15-0.022-29.9-0.0352z" });
+	      return _react2.default.createElement("path", { id: "band4", visibility: this.props.visibility, className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m374.05 11.875v146.2c14.9-0.0198 16.498-0.027 29.9-0.0488v-146.12c-13.402-0.0159-15-0.022-29.9-0.0352z" });
 	    }
 	  }]);
 
@@ -22282,7 +22291,7 @@
 	  _createClass(Band5, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band5", visibility: this.props.visibility, className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m334.05 12.001v146.02c8.9272-0.0166 27.098-0.0432 29.9-0.0488v-145.93c-2.8024-0.004-20.973-0.0225-29.9-0.0352z" });
+	      return _react2.default.createElement("path", { id: "band5", visibility: this.props.visibility, className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m439.05 11.951v146.02c8.9272-0.0166 27.098-0.0432 29.9-0.0488v-145.93c-2.8024-0.004-20.973-0.0225-29.9-0.0352z" });
 	    }
 	  }]);
 
@@ -22331,7 +22340,7 @@
 	  _createClass(Band6, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("path", { id: "band6", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m414.05 0.049892v170h49.898v-170h-49.898z" });
+	      return _react2.default.createElement("path", { id: "band6", className: this.props.bandColor + " resistor-band", onClick: this.props.onBandClick, d: "m519.05 0v170h49.898v-170h-49.898z" });
 	    }
 	  }]);
 
