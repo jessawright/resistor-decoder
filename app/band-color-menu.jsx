@@ -12,7 +12,7 @@ class BandColorMenu extends React.Component {
     var colorOptionList = Object.getOwnPropertyNames(this.props.resistorDecoderInfo.bandColorCode[thisBandMeaning]);
     let colorOptionListMarkup = colorOptionList.map((item, index) => {
       return (
-        <div key={item} className={item + "-label"}>
+        <div key={item} className={item + "-label band-color-button"}>
           <input type="radio" id={item} onChange={this.props.onColorClick} checked={this.props.bandColors[this.props.bandClicked] == item}/>
           <label className="color-menu-options" htmlFor={item}>
             {item}
