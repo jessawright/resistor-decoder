@@ -21788,12 +21788,12 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        null,
+	        { className: "band-number-button" },
 	        _react2.default.createElement("input", { type: "radio", value: this.props.bandNumber, onChange: this.props.onChange, checked: this.props.checked, id: this.props.bandNumber }),
 	        _react2.default.createElement(
 	          "label",
 	          { htmlFor: this.props.bandNumber },
-	          this.props.bandNumber + " bands"
+	          this.props.bandNumber + " BANDS"
 	        )
 	      );
 	    }
@@ -21847,7 +21847,7 @@
 	      return _react2.default.createElement(
 	        "button",
 	        { type: "button", onClick: this.props.onReset },
-	        "Reset"
+	        "RESET"
 	      );
 	    }
 	  }]);
@@ -21940,7 +21940,7 @@
 	              _react2.default.createElement("rect", { x: "0", y: "0", width: "8", height: "8", fill: "#555" }),
 	              _react2.default.createElement("rect", { x: "0", y: "0", width: "4", height: "8", stroke: "none", fill: "#222" })
 	            ),
-	            _react2.default.createElement("image", { id: "glitter-texture", xlinkHref: "/images/egg-shell.png", x: "0", y: "0", width: "256", height: "256" }),
+	            _react2.default.createElement("image", { id: "glitter-texture", xlinkHref: "/assets/images/egg-shell.png", x: "0", y: "0", width: "256", height: "256" }),
 	            _react2.default.createElement(
 	              "pattern",
 	              { id: "gold-glitter", patternUnits: "userSpaceOnUse", width: "256", height: "256" },

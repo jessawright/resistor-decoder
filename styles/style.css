@@ -1,8 +1,15 @@
 /* Resistor colors taken from resistor photos */
 /* wire and solder */
+@font-face {
+  font-family: 'osifont';
+  src: url("/assets/fonts/osifont-webfont.woff2") format("woff2"), url("/assets/fonts/osifont-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  background-color: #167851;
-  color: #d6bc71; }
+  background-color: #0d913d;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'osifont'; }
 
 #resistor-body {
   fill: #E8C599; }
@@ -10,7 +17,8 @@ body {
 .container {
   position: relative;
   width: fit-content;
-  color: white; }
+  color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.9); }
 
 /* Restyle the radio buttons */
 input[type=radio] {
@@ -20,9 +28,9 @@ input[type=radio] {
 label {
   cursor: pointer;
   position: relative;
-  padding: 0.1em 0.25em 0.1em 1.8em;
+  padding: 0 0 0 1.4em;
   font-size: 1.25rem;
-  color: white; }
+  color: rgba(255, 255, 255, 0.9); }
 
 label:before {
   content: "";
@@ -30,32 +38,47 @@ label:before {
   width: 0.8em;
   height: 0.8em;
   position: absolute;
-  left: 0.5em;
+  left: 0.3em;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
   background-color: #fa1915; }
 
 input[type=radio]:checked + label:before {
-  background-image: radial-gradient(circle, #ffffff 0%, #fefe71 10%, #fa1915 75%);
-  box-shadow: 0 0 0.5em #fa1915; }
+  background-image: radial-gradient(circle, #ffffff 0%, #fefe71 10%, #fa1915 65%);
+  box-shadow: 0 0 1em white, 0 0 1.2em #fa1915; }
 
-#band-number-menu {
-  margin: 0 0 2em; }
-  #band-number-menu div {
-    display: inline-block; }
+#band-number-menu > button {
+  background-color: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+  outline: none;
+  font-size: 1.25rem;
+  font-family: 'osifont';
+  padding: .3em;
+  margin: .3rem;
+  box-sizing: border-box; }
+
+.band-number-button {
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  padding: .3em .3em .3em 0;
+  display: inline-block;
+  margin: .3rem;
+  box-sizing: border-box;
+  font-size: 1.25rem; }
 
 /* Band Color Menu styles */
 #band-color-menu {
-  background-color: #167851;
+  background-color: #0d913d;
   border: 2px solid black;
+  box-shadow: 0 0 0.5em black;
   width: fit-content;
   padding: 0.5rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
   #band-color-menu div {
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.9);
     margin: 0.125em 0; }
 
 /* Position each Band Color Menu to the right of the band it controls */
@@ -87,7 +110,7 @@ button {
 
 /* Color the resistor bands */
 .blank {
-  fill: url(#blank-band); }
+  fill: url("#blank-band"); }
 
 .black {
   fill: #161619; }
@@ -120,10 +143,10 @@ button {
   fill: #DCD4D1; }
 
 .gold {
-  fill: url(#gold-glitter); }
+  fill: url("#gold-glitter"); }
 
 .silver {
-  fill: url(#silver-glitter); }
+  fill: url("#silver-glitter"); }
 
 .black-label {
   background-color: #161619; }
@@ -156,10 +179,10 @@ button {
   background-color: #DCD4D1; }
 
 .gold-label {
-  background: url("/images/egg-shell.png") #CBA254; }
+  background: url("/assets/images/egg-shell.png") #CBA254; }
 
 .silver-label {
-  background: url("/images/egg-shell.png") #A8AAAD; }
+  background: url("/assets/images/egg-shell.png") #A8AAAD; }
 
 /* Calc Box styles */
 .calc-boxes {
