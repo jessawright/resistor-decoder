@@ -16,7 +16,7 @@ body {
   fill: #E8C599; }
 
 #wire {
-  fill: #BCB8B0; }
+  fill: #919791; }
 
 #through-hole-1, #through-hole-2 {
   fill: #d6bc71; }
@@ -25,7 +25,8 @@ body {
   position: relative;
   width: fit-content;
   color: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.9); }
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  padding: 2rem; }
 
 /* Restyle the radio buttons */
 input[type=radio] {
@@ -63,17 +64,17 @@ input[type=radio]:checked + label:before {
 #band-color-menu {
   background-color: #0d913d;
   border: 2px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 0.5em black;
+  box-shadow: 0 0 15px 5px black;
   width: fit-content;
   height: fit-content;
-  padding: 0.5rem;
+  padding: 0 .5em;
   position: absolute;
   top: 50%;
   transform: translateY(-50%); }
 
 .band-color-button {
   border: 2px solid rgba(255, 255, 255, 0.9);
-  margin: 0.125em 0;
+  margin: 0.5em 0;
   font-size: 1rem; }
 
 /* Position each Band Color Menu to the right of the band it controls */

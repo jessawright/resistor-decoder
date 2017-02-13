@@ -17,7 +17,7 @@ $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
 /* wire and solder */
-$metal: #BCB8B0;
+$metal: #919791;
 $pcb-green: #0d913d;
 $pcb-gold: #d6bc71;
 $red-led-on: #fa1915;
@@ -39,6 +39,7 @@ body {
 
 #resistor-body {
     fill: $tan-body;
+
 }
 
 #wire {
@@ -53,6 +54,7 @@ body {
     width: fit-content;
     color: $pcb-printing;
     border: 2px solid $pcb-printing;
+    padding: 2rem;
 }
 /* Restyle the radio buttons */
 input[type=radio] {
@@ -93,10 +95,10 @@ input[type=radio]:checked + label:before {
 #band-color-menu {
     background-color: $pcb-green;
     border: 2px solid $pcb-printing;
-    box-shadow: 0 0 0.5em black;
+    box-shadow: 0 0 15px 5px black;
     width: fit-content;
     height: fit-content;
-    padding: 0.5rem;
+    padding: 0 .5em;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -104,7 +106,7 @@ input[type=radio]:checked + label:before {
 
 .band-color-button {
     border: 2px solid $pcb-printing;
-    margin: 0.125em 0;
+    margin: 0.5em 0;
     font-size: 1rem;
 }
 /* Position each Band Color Menu to the right of the band it controls */
