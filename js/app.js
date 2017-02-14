@@ -21571,6 +21571,10 @@
 
 	var _bandNumberMenu2 = _interopRequireDefault(_bandNumberMenu);
 
+	var _resetButton = __webpack_require__(181);
+
+	var _resetButton2 = _interopRequireDefault(_resetButton);
+
 	var _resistor = __webpack_require__(182);
 
 	var _resistor2 = _interopRequireDefault(_resistor);
@@ -21664,7 +21668,17 @@
 	      return _react2.default.createElement(
 	        "div",
 	        null,
-	        _react2.default.createElement(_bandNumberMenu2.default, { bandNumberOptions: this.props.resistorDecoderInfo.bandNumberOptions, selectedBandNumber: this.state.selectedBandNumber, onChange: this.handleBandNumberChange, onReset: this.handleResetClick }),
+	        _react2.default.createElement(
+	          "h1",
+	          { className: "title" },
+	          "RESISTOR COLOR DECODER"
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          null,
+	          _react2.default.createElement(_bandNumberMenu2.default, { bandNumberOptions: this.props.resistorDecoderInfo.bandNumberOptions, selectedBandNumber: this.state.selectedBandNumber, onChange: this.handleBandNumberChange, onReset: this.handleResetClick }),
+	          _react2.default.createElement(_resetButton2.default, { onReset: this.props.onReset })
+	        ),
 	        _react2.default.createElement(_resistor2.default, { selectedBandNumber: this.state.selectedBandNumber, bandColors: this.state.bandColors, resistorDecoderInfo: this.props.resistorDecoderInfo, onBandClick: this.handleBandClick, bandClicked: this.state.bandClicked, onColorClick: this.handleColorClick }),
 	        _react2.default.createElement(_calculations2.default, { selectedBandNumber: this.state.selectedBandNumber, resistorDecoderInfo: this.props.resistorDecoderInfo, bandColors: this.state.bandColors })
 	      );
@@ -21700,10 +21714,6 @@
 
 	var _bandNumberButton2 = _interopRequireDefault(_bandNumberButton);
 
-	var _resetButton = __webpack_require__(181);
-
-	var _resetButton2 = _interopRequireDefault(_resetButton);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21734,11 +21744,10 @@
 	        { id: "band-number-menu" },
 	        _react2.default.createElement(
 	          "h2",
-	          null,
-	          "Number of colored bands"
+	          { className: "section-title" },
+	          "CHOOSE NUMBER OF BANDS"
 	        ),
-	        bandNumberButtonList,
-	        _react2.default.createElement(_resetButton2.default, { onReset: this.props.onReset })
+	        bandNumberButtonList
 	      );
 	    }
 	  }]);
@@ -21848,7 +21857,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "button",
-	        { type: "button", onClick: this.props.onReset },
+	        { type: "button", id: "reset-button", onClick: this.props.onReset },
 	        "RESET"
 	      );
 	    }
@@ -21929,7 +21938,12 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "container" },
+	        { id: "resistor-section" },
+	        _react2.default.createElement(
+	          "h2",
+	          { className: "section-title" },
+	          "CHOOSE BAND COLORS"
+	        ),
 	        _react2.default.createElement(
 	          "svg",
 	          { height: "200", width: "730.65", viewBox: "0 -10 730.64934 200" },
@@ -22437,18 +22451,18 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'calculations' },
+	        { className: 'calculation-section' },
 	        _react2.default.createElement(
 	          'h2',
-	          null,
-	          'Resistor Value'
+	          { className: 'section-title' },
+	          'RESISTOR VALUE'
 	        ),
 	        _react2.default.createElement(
 	          'ul',
-	          { className: 'calc-boxes' },
-	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'digit-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Resistance', display: 'calc-box-active' }),
-	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tolerance-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Tolerance', display: 'calc-box-active' }),
-	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tempCoefficient-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Temperature Coefficient', display: this.props.selectedBandNumber === '6' ? 'calc-box-active' : 'calc-box-inactive' })
+	          { className: 'calc-box-list' },
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'digit-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'RESISTANCE', display: 'calc-box-active' }),
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tolerance-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'TOLERANCE', display: 'calc-box-active' }),
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tempCoefficient-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'TEMPERATURE COEFFICIENT', display: this.props.selectedBandNumber === '6' ? 'calc-box-active' : 'calc-box-inactive' })
 	        )
 	      );
 	    }
