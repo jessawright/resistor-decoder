@@ -5,13 +5,10 @@ import ReactDOM from "react-dom";
 class ResetButton extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
-
-
   render() {
-    return (<button type='button' onClick={this.props.onReset}>RESET</button>);
+    return (<button type='button' id='reset-button' onClick={this.props.onReset}>RESET</button>);
   }
 }
 

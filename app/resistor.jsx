@@ -15,8 +15,9 @@ class ResistorTrial extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <svg height="200" width="730.65" viewBox="0 -10 730.64934 200">
+      <div id='resistor-section'>
+        <h2 className='section-title'>CHOOSE BAND COLORS</h2>
+        <svg  height="200" width="730.65" viewBox="0 -10 730.64934 200">
           <defs>
             <pattern id="blank-band" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(315)">
               <rect x="0" y="0" width="8" height="8" fill="#555"/>

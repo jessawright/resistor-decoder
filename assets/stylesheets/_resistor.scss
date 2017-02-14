@@ -1,0 +1,77 @@
+#resistor-section {
+    position: relative;
+    width: fit-content;
+    color: $pcb-printing;
+    border: 2px solid $pcb-printing;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0 .5rem 1rem 0;
+}
+
+#resistor-body {
+    fill: $tan-body;
+}
+
+#wire {
+    fill: $metal;
+}
+
+#through-hole-1,
+#through-hole-2 {
+    fill: $pcb-gold;
+}
+
+.resistor-band {
+    cursor: pointer;
+}
+
+.blank {
+    fill: $blank-band;
+}
+
+.black {
+    fill: $black-band;
+}
+
+.brown {
+    fill: $brown-band;
+}
+
+.red {
+    fill: $red-band;
+}
+
+.orange {
+    fill: $orange-band;
+}
+
+.yellow {
+    fill: $yellow-band;
+}
+
+.green {
+    fill: $green-band;
+}
+
+.blue {
+    fill: $blue-band;
+}
+
+.violet {
+    fill: $violet-band;
+}
+
+.grey {
+    fill: $grey-band;
+}
+
+.white {
+    fill: $white-band;
+}
+
+.gold {
+    fill: $gold-band;
+}
+
+.silver {
+    fill: $silver-band;
+}

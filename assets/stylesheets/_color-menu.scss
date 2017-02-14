@@ -1,0 +1,100 @@
+/* Band color menu and buttons */
+#band-color-menu {
+    background-color: $pcb-green;
+    border: 2px solid $pcb-printing;
+    box-shadow: 0 0 15px 5px black;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 .5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.band-color-button {
+    border: 2px solid $pcb-printing;
+    margin: 0.5em 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0;
+}
+/* Position each Band Color Menu to the right of the band it controls */
+#band-color-menu.band1 {
+    left: 28.6%;
+}
+
+#band-color-menu.band2 {
+    left: 37.5%;
+}
+
+#band-color-menu.band3 {
+    left: 46.4%;
+}
+
+#band-color-menu.band4 {
+    left: 55.3%;
+}
+
+#band-color-menu.band5 {
+    left: 64.2%;
+}
+
+#band-color-menu.band6 {
+    left: 77.9%;
+}
+
+.color-menu-options {
+    display: block;
+}
+/* Indicate that these are clickable */
+
+.black-label {
+    background-color: $black-band;
+}
+
+.brown-label {
+    background-color: $brown-band;
+}
+
+.red-label {
+    background-color: $red-band;
+}
+
+.orange-label {
+    background-color: $orange-band;
+}
+
+.yellow-label {
+    background-color: $yellow-band;
+    color: black;
+}
+
+.green-label {
+    background-color: $green-band;
+}
+
+.blue-label {
+    background-color: $blue-band;
+}
+
+.violet-label {
+    background-color: $violet-band;
+}
+
+.grey-label {
+    background-color: $grey-band;
+}
+
+.white-label {
+    background-color: $white-band;
+    color: black;
+}
+
+.gold-label {
+    background: url("/assets/images/egg-shell.png") #CBA254;
+}
+
+.silver-label {
+    background: url("/assets/images/egg-shell.png") #A8AAAD;
+    color: black;
+}

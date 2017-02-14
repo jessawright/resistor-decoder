@@ -1,0 +1,41 @@
+/* This moves it down below the border, but I don't know why it overlaps here when it doesnt in the band color menus */
+#band-number-menu label:before {
+    top: 2px;
+}
+
+#band-number-menu,
+#reset-button {
+    display: inline-block;
+}
+
+#band-number-menu {
+    border: 2px solid $pcb-printing;
+    width: fit-content;
+    padding: 0.2rem .5rem 1rem 1rem;
+    margin: 0 1rem 1rem 0;
+    display: inline-block;
+}
+
+.band-number-button {
+    border: 2px solid $pcb-printing;
+    background-color: $pcb-printing;
+    color: $pcb-green;
+    font-weight: bold;
+    background-clip: content-box;
+    margin: 0.25rem 0.5rem 0 0;
+    font-size: 1.25rem;
+    display: inline-block;
+}
+
+#reset-button {
+    outline: none;
+    background-color: $pcb-printing;
+    background-clip: padding-box;
+    color: $pcb-green;
+    font-family: 'osifont';
+    font-weight: bold;
+    border: 2px solid $pcb-printing;
+    font-size: 1.5rem;
+    vertical-align: bottom;
+    margin: 0 0.5rem 1rem 0;
+}

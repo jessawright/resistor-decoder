@@ -42,13 +42,13 @@ class Calculations extends React.Component {
 
 
     return (
-      <div className="calculations">
-        <h2>Resistor Value</h2>
-        <ul className='calc-boxes'>
-          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="digit-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="Resistance" display='calc-box-active'/>
-          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tolerance-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="Tolerance" display='calc-box-active'/>
+      <div className="calculation-section">
+        <h2 className='section-title'>RESISTOR VALUE</h2>
+        <ul className='calc-box-list'>
+          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="digit-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="RESISTANCE" display='calc-box-active'/>
+          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tolerance-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="TOLERANCE" display='calc-box-active'/>
 
-          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tempCoefficient-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="Temperature Coefficient" display={this.props.selectedBandNumber === '6' ? 'calc-box-active' : 'calc-box-inactive'}/>
+          <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="tempCoefficient-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="TEMPERATURE COEFFICIENT" display={this.props.selectedBandNumber === '6' ? 'calc-box-active' : 'calc-box-inactive'}/>
         </ul>
       </div>
 

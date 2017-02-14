@@ -1,0 +1,22 @@
+input[type=radio] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    padding: 0  .3em 0 1.8em;
+}
+
+label:before {
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: radial-gradient(circle, $red-led-off 0%, $red-led-off 50%, transparent 50%);
+}
+input[type=radio]:checked + label:before {
+    background-image: radial-gradient(circle, #fdbc2e 0%,  $red-led-on 50%, transparent 70%);
+}

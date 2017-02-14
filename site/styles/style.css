@@ -12,44 +12,13 @@ font-face {
   font-weight: normal;
   font-style: normal; }
 
-body {
-  background-color: #15723b;
-  color: rgba(255, 255, 255, 0.8);
-  font-family: 'osifont';
-  line-height: 1.5; }
-
-h1 {
-  margin: .5rem; }
-
-h2, h3, p {
-  padding: 0;
-  margin: 0; }
-
-#resistor-body {
-  fill: #E8C599; }
-
-#wire {
-  fill: #919791; }
-
-#through-hole-1, #through-hole-2 {
-  fill: #d6bc71; }
-
-.container {
-  position: relative;
-  width: fit-content;
-  color: rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  padding: .5rem;
-  margin: .5rem; }
-
-/* Restyle the radio buttons */
 input[type=radio] {
   display: none; }
 
 label {
   cursor: pointer;
   position: relative;
-  padding: 0 .3em 0 1.8em; }
+  padding: 0  .3em 0 1.8em; }
 
 label:before {
   content: "";
@@ -58,73 +27,32 @@ label:before {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: radial-gradient(circle, #5C050C 0%, #5C050C 50%, rgba(255, 255, 255, 0.8) 50%); }
+  background-image: radial-gradient(circle, #5C050C 0%, #5C050C 50%, transparent 50%); }
 
 input[type=radio]:checked + label:before {
-  background-image: radial-gradient(circle, #fdbc2e 0%, #fa1915 50%, rgba(255, 255, 255, 0.8) 70%); }
+  background-image: radial-gradient(circle, #fdbc2e 0%, #fa1915 50%, transparent 70%); }
 
-/* Band number menu and buttons */
-#band-number-menu label:before {
-  top: 2px;
-  /* This moves it down below the border, but I don't know why it overlaps. */ }
-
-#band-number-menu {
-  border: 2px solid rgba(255, 255, 255, 0.8);
+#resistor-section {
+  position: relative;
   width: fit-content;
-  padding: .5rem;
-  margin: .5rem; }
-
-.band-number-button {
+  color: rgba(255, 255, 255, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.8);
-  margin: 0.3rem 0.3em 0.3em 0;
-  font-size: 1.25rem;
-  display: inline-block; }
+  padding: 0 1rem 1rem 1rem;
+  margin: 0 .5rem 1rem 0; }
 
-/* Band color menu and buttons */
-#band-color-menu {
-  background-color: #15723b;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 15px 5px black;
-  width: fit-content;
-  height: fit-content;
-  padding: 0 .5em;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
+#resistor-body {
+  fill: #E8C599; }
 
-.band-color-button {
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  margin: 0.5em 0;
-  font-size: 1rem; }
+#wire {
+  fill: #919791; }
 
-/* Position each Band Color Menu to the right of the band it controls */
-#band-color-menu.band1 {
-  left: 28.6%; }
+#through-hole-1,
+#through-hole-2 {
+  fill: #d6bc71; }
 
-#band-color-menu.band2 {
-  left: 37.5%; }
-
-#band-color-menu.band3 {
-  left: 46.4%; }
-
-#band-color-menu.band4 {
-  left: 55.3%; }
-
-#band-color-menu.band5 {
-  left: 64.2%; }
-
-#band-color-menu.band6 {
-  left: 77.9%; }
-
-.color-menu-options {
-  display: block; }
-
-/* Indicate that these are clickable */
-.resistor-band,
-button {
+.resistor-band {
   cursor: pointer; }
 
-/* Color the resistor bands */
 .blank {
   fill: url("#blank-band"); }
 
@@ -164,6 +92,121 @@ button {
 .silver {
   fill: url("#silver-glitter"); }
 
+/* This moves it down below the border, but I don't know why it overlaps here when it doesnt in the band color menus */
+#band-number-menu label:before {
+  top: 2px; }
+
+#band-number-menu,
+#reset-button {
+  display: inline-block; }
+
+#band-number-menu {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  width: fit-content;
+  padding: 0.2rem .5rem 1rem 1rem;
+  margin: 0 1rem 1rem 0;
+  display: inline-block; }
+
+.band-number-button {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #15723b;
+  font-weight: bold;
+  background-clip: content-box;
+  margin: 0.25rem 0.5rem 0 0;
+  font-size: 1.25rem;
+  display: inline-block; }
+
+#reset-button {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-clip: padding-box;
+  color: #15723b;
+  font-family: 'osifont';
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  vertical-align: bottom;
+  margin: 0 0.5rem 1rem 0; }
+
+.calculation-section {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  width: fit-content;
+  margin: 0 1rem 1rem 0;
+  padding: .2rem 0 1rem 1rem; }
+
+.calc-box-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.calc-label {
+  padding: 0;
+  margin: 0 0 .5rem 0; }
+
+.calc-list-entry {
+  display: inline-block;
+  margin: 0; }
+
+.calc-box {
+  padding: .2em .2em 0 .2em;
+  border: 10px solid black;
+  width: 6em;
+  font-family: 'screenmatrix';
+  font-size: 2rem;
+  line-height: 1;
+  height: 1em;
+  color: #464646;
+  margin: 0 1rem 0 0; }
+
+.calc-box-active {
+  background-color: #d0d0d0; }
+
+.calc-box-inactive {
+  background-color: #59755e; }
+
+/* Band color menu and buttons */
+#band-color-menu {
+  background-color: #15723b;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px 5px black;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 .5em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.band-color-button {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  margin: 0.5em 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0; }
+
+/* Position each Band Color Menu to the right of the band it controls */
+#band-color-menu.band1 {
+  left: 28.6%; }
+
+#band-color-menu.band2 {
+  left: 37.5%; }
+
+#band-color-menu.band3 {
+  left: 46.4%; }
+
+#band-color-menu.band4 {
+  left: 55.3%; }
+
+#band-color-menu.band5 {
+  left: 64.2%; }
+
+#band-color-menu.band6 {
+  left: 77.9%; }
+
+.color-menu-options {
+  display: block; }
+
+/* Indicate that these are clickable */
 .black-label {
   background-color: #161619; }
 
@@ -203,34 +246,19 @@ button {
   background: url("/assets/images/egg-shell.png") #A8AAAD;
   color: black; }
 
-/* Calc Box styles */
-.calculations {
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  width: fit-content;
-  margin: .5rem;
-  padding: .5rem; }
+body {
+  background-color: #15723b;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'osifont';
+  line-height: 1.5;
+  padding: 1rem; }
 
-.calc-boxes {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
+.title {
+  margin: 0 0 1rem 0; }
 
-.calc-box {
-  padding: 0.1em;
-  border: 5px solid black;
-  width: 6em;
-  font-family: 'screenmatrix';
-  font-size: 2rem;
-  line-height: 1;
-  height: 1em;
-  color: #464646; }
+button {
+  cursor: pointer; }
 
-.calc-box-active {
-  background-color: #d0d0d0; }
-
-.calc-box-inactive {
-  background-color: #59755e; }
-
-.calc-list-entry {
-  display: inline-block;
-  margin: 0 0.5rem; }
+.section-title {
+  padding: 0;
+  margin: 0; }

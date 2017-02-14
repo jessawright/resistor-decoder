@@ -1,0 +1,43 @@
+/* Resistor colors taken from resistor photos */
+$blank-band: url("#blank-band");
+$black-band: #161619;
+$brown-band: #4C231F;
+$red-band: #A71E25;
+$orange-band: #DB5C24;
+$yellow-band: #E7C735;
+$green-band: #307D4F;
+$blue-band: #17467C;
+$violet-band: #6A2C6A;
+$grey-band: #77737F;
+$white-band: #DCD4D1;
+$gold-band: url("#gold-glitter");
+$silver-band: url("#silver-glitter");
+$tan-body: #E8C599;
+$dark-green-body: #2E645A;
+$light-green-body: #7DC0A6;
+$light-blue-body: #74C0D6;
+/* wire and solder */
+$metal: #919791;
+$pcb-green: #15723b;
+$pcb-light-green: #478c38;
+$pcb-gold: #d6bc71;
+$red-led-on: #fa1915;
+$red-led-off: #5C050C;
+$pcb-printing: rgba(255, 255, 255, .8);
+$lcd-screen-on: #d0d0d0;
+$lcd-screen-off: #59755e;
+$lcd-print: #464646;
+
+@font-face {
+    font-family: 'osifont';
+    src: url('/assets/fonts/osifont-webfont.woff2') format('woff2'), url('/assets/fonts/osifont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+font-face {
+    font-family: 'screenmatrix';
+    src: url('/assets/fonts/screenmatrix-webfont.woff2') format('woff2'), url('/assets/fonts/screenmatrix-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
