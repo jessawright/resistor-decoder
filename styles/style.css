@@ -58,10 +58,10 @@ label:before {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: radial-gradient(circle, #862930 0%, #862930 50%, rgba(255, 255, 255, 0.8) 50%); }
+  background-image: radial-gradient(circle, #5C050C 0%, #5C050C 50%, rgba(255, 255, 255, 0.8) 50%); }
 
 input[type=radio]:checked + label:before {
-  background-image: radial-gradient(circle, #fa8525 0%, #fa1915 40%, #fa1915 50%, rgba(255, 255, 255, 0.8) 60%); }
+  background-image: radial-gradient(circle, #fdbc2e 0%, #fa1915 50%, rgba(255, 255, 255, 0.8) 70%); }
 
 /* Band number menu and buttons */
 #band-number-menu label:before {
@@ -214,16 +214,23 @@ button {
   list-style: none;
   margin: 0;
   padding: 0; }
-  .calc-boxes .calc-box {
-    padding: 0.1em;
-    border: 5px solid black;
-    min-width: 5em;
-    font-family: 'screenmatrix';
-    font-size: 2rem;
-    line-height: 1;
-    height: 1em;
-    background-color: #938c72;
-    color: #323427; }
-  .calc-boxes .calc-list-entry {
-    display: inline-block;
-    margin: 0 0.25rem; }
+
+.calc-box {
+  padding: 0.1em;
+  border: 5px solid black;
+  width: 6em;
+  font-family: 'screenmatrix';
+  font-size: 2rem;
+  line-height: 1;
+  height: 1em;
+  color: #464646; }
+
+.calc-box-active {
+  background-color: #d0d0d0; }
+
+.calc-box-inactive {
+  background-color: #59755e; }
+
+.calc-list-entry {
+  display: inline-block;
+  margin: 0 0.5rem; }

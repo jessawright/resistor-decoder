@@ -21605,7 +21605,6 @@
 	        'band5': 'blank',
 	        'band6': 'blank'
 	      },
-
 	      bandClicked: ''
 	    };
 	    _this.handleBandNumberChange = _this.handleBandNumberChange.bind(_this);
@@ -21627,7 +21626,8 @@
 	          'band4': 'blank',
 	          'band5': 'blank',
 	          'band6': 'blank'
-	        }
+	        },
+	        bandClicked: ''
 	      });
 	    }
 	  }, {
@@ -21642,7 +21642,8 @@
 	          'band4': 'blank',
 	          'band5': 'blank',
 	          'band6': 'blank'
-	        }
+	        },
+	        bandClicked: ''
 	      });
 	    }
 	  }, {
@@ -21653,17 +21654,13 @@
 	  }, {
 	    key: "handleColorClick",
 	    value: function handleColorClick(event) {
-	      var bandColorsTemp = this.state.bandColors;
-	      bandColorsTemp[this.state.bandClicked] = event.target.id;
-	      this.setState({
-	        bandColors: bandColorsTemp,
-	        bandClicked: ''
-	      });
+	      var bandColors = this.state.bandColors;
+	      bandColors[this.state.bandClicked] = event.target.id;
+	      this.setState({ bandColors: bandColors, bandClicked: '' });
 	    }
 	  }, {
 	    key: "render",
 	    value: function render() {
-
 	      return _react2.default.createElement(
 	        "div",
 	        null,
@@ -21963,7 +21960,7 @@
 	              { id: "dropShadow" },
 	              _react2.default.createElement("feGaussianBlur", { "in": "SourceAlpha", stdDeviation: "5" }),
 	              _react2.default.createElement("feOffset", { dx: "0", dy: "1", result: "offsetblur" }),
-	              _react2.default.createElement("feFlood", { "flood-color": "rgba(0,0,0,0.5)" }),
+	              _react2.default.createElement("feFlood", { floodColor: "rgba(0,0,0,0.5)" }),
 	              _react2.default.createElement("feComposite", { in2: "offsetblur", operator: "in" }),
 	              _react2.default.createElement(
 	                "feMerge",
@@ -22449,9 +22446,9 @@
 	        _react2.default.createElement(
 	          'ul',
 	          { className: 'calc-boxes' },
-	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'digit-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Resistance' }),
-	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tolerance-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Tolerance' }),
-	          this.props.selectedBandNumber === '6' ? _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tempCoefficient-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Temperature Coefficient' }) : ''
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'digit-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Resistance', display: 'calc-box-active' }),
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tolerance-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Tolerance', display: 'calc-box-active' }),
+	          _react2.default.createElement(_calcBox2.default, { resistorDecoderInfo: this.props.resistorDecoderInfo, id: 'tempCoefficient-box', decodedResistor: decodedResistor, activeBandColors: activeBandColors, calcLabel: 'Temperature Coefficient', display: this.props.selectedBandNumber === '6' ? 'calc-box-active' : 'calc-box-inactive' })
 	        )
 	      );
 	    }
@@ -22506,6 +22503,7 @@
 	      var decodedResistor = this.props.decodedResistor;
 	      var id = this.props.id;
 	      var units = this.props.resistorDecoderInfo.units;
+	      var display = this.props.display;
 
 	      function displayValues() {
 	        switch (id) {
@@ -22522,7 +22520,11 @@
 	            boxContent = decodedResistor['tolerance'] + units['tolerance'];
 	            break;
 	          case 'tempCoefficient-box':
-	            boxContent = decodedResistor['tempCoefficient'] + units['tempCoefficient'];
+	            if (display === 'calc-box-active') {
+	              boxContent = decodedResistor['tempCoefficient'] + units['tempCoefficient'];
+	            } else {
+	              boxContent = '---';
+	            }
 	            break;
 	        }
 	      };
@@ -22537,13 +22539,11 @@
 	        _react2.default.createElement(
 	          'h3',
 	          { className: 'calc-label' },
-	          this.props.calcLabel,
-	          ' '
+	          this.props.calcLabel
 	        ),
-	        ' ',
 	        _react2.default.createElement(
 	          'p',
-	          { className: 'calc-box', id: id },
+	          { className: this.props.display + ' calc-box', id: id },
 	          boxContent
 	        )
 	      );
