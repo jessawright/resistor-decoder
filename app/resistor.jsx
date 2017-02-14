@@ -34,7 +34,7 @@ class ResistorTrial extends React.Component {
             <filter id="dropShadow">
               <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
               <feOffset dx="0" dy="1" result="offsetblur"/>
-              <feFlood flood-color="rgba(0,0,0,0.5)"/>
+              <feFlood floodColor="rgba(0,0,0,0.5)"/>
               <feComposite in2="offsetblur" operator="in"/>
               <feMerge>
                 <feMergeNode/>

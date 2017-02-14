@@ -11,6 +11,7 @@ class CalcBox extends React.Component {
     var decodedResistor = this.props.decodedResistor;
     var id = this.props.id;
     var units = this.props.resistorDecoderInfo.units;
+    var display = this.props.display;
 
 
     function displayValues() {
@@ -28,7 +29,11 @@ class CalcBox extends React.Component {
           boxContent = decodedResistor['tolerance'] + units['tolerance'];
           break;
         case 'tempCoefficient-box':
-          boxContent = decodedResistor['tempCoefficient']  + units['tempCoefficient'];
+        if (display === 'calc-box-active') {
+          boxContent = (decodedResistor['tempCoefficient']  + units['tempCoefficient']);
+        } else {
+          boxContent = '---';
+        }
           break;
       }
     };
@@ -38,7 +43,10 @@ class CalcBox extends React.Component {
     };
 
     return (
-      <li className='calc-list-entry'><h3 className="calc-label">{this.props.calcLabel} </h3> <p className='calc-box' id={id}>{boxContent}</p></li>
+      <li className='calc-list-entry'>
+        <h3 className="calc-label">{this.props.calcLabel}</h3>
+        <p className={this.props.display + ' calc-box'} id={id}>{boxContent}</p>
+      </li>
     )
   }
 }

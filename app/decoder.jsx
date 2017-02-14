@@ -4,7 +4,6 @@ import BandNumberMenu from './band-number-menu.jsx';
 import Resistor from './resistor.jsx';
 import Calculations from './calculations.jsx';
 
-
 class Decoder extends React.Component {
 
   constructor(props) {
@@ -19,7 +18,6 @@ class Decoder extends React.Component {
         'band5': 'blank',
         'band6': 'blank'
       },
-
       bandClicked: ''
     };
     this.handleBandNumberChange = this.handleBandNumberChange.bind(this);
@@ -38,9 +36,11 @@ class Decoder extends React.Component {
         'band4': 'blank',
         'band5': 'blank',
         'band6': 'blank'
-      }
+      },
+      bandClicked: ''
     })
   };
+
   handleResetClick(event) {
     this.setState({
       selectedBandNumber: this.props.resistorDecoderInfo.bandNumberOptions[0],
@@ -51,31 +51,27 @@ class Decoder extends React.Component {
         'band4': 'blank',
         'band5': 'blank',
         'band6': 'blank'
-      }
+      },
+      bandClicked: ''
     })
-  }
+  };
 
   handleBandClick(event) {
     this.setState({bandClicked: event.target.id});
   };
 
   handleColorClick(event) {
-    var bandColorsTemp = this.state.bandColors;
-    bandColorsTemp[this.state.bandClicked] = event.target.id;
-    this.setState({
-      bandColors: bandColorsTemp,
-      bandClicked: ''
-    });
+    var bandColors = this.state.bandColors;
+    bandColors[this.state.bandClicked] = event.target.id;
+    this.setState({bandColors: bandColors, bandClicked: ''});
   };
 
   render() {
-
     return (
       <div>
         <BandNumberMenu bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberChange} onReset={this.handleResetClick}/>
         <Resistor selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors} resistorDecoderInfo={this.props.resistorDecoderInfo} onBandClick={this.handleBandClick} bandClicked={this.state.bandClicked} onColorClick={this.handleColorClick}/>
-        <Calculations selectedBandNumber={this.state.selectedBandNumber} resistorDecoderInfo={this.props.resistorDecoderInfo}  bandColors={this.state.bandColors}/>
-
+        <Calculations selectedBandNumber={this.state.selectedBandNumber} resistorDecoderInfo={this.props.resistorDecoderInfo} bandColors={this.state.bandColors}/>
       </div>
     )
   }

@@ -21,10 +21,11 @@ $metal: #919791;
 $pcb-green: #15723b;
 $pcb-gold: #d6bc71;
 $red-led-on: #fa1915;
-$red-led-off: #862930;
+$red-led-off: #5C050C;
 $pcb-printing: rgba(255, 255, 255, .8);
-$lcd-screen: #938c72;
-$lcd-print: #323427;
+$lcd-screen-on: #d0d0d0;
+$lcd-screen-off: #59755e;
+$lcd-print: #464646;
 @font-face {
     font-family: 'osifont';
     src: url('/assets/fonts/osifont-webfont.woff2') format('woff2'), url('/assets/fonts/osifont-webfont.woff') format('woff');
@@ -46,7 +47,7 @@ body {
 }
 
 h1 {
-  
+
   margin: .5rem;
 }
 h2, h3, p {
@@ -96,7 +97,7 @@ label:before {
 }
 
 input[type=radio]:checked + label:before {
-    background-image: radial-gradient(circle, #fa8525 0%, $red-led-on 40%, $red-led-on 50%, $pcb-printing 60%);
+    background-image: radial-gradient(circle, #fdbc2e 0%,  $red-led-on 50%, $pcb-printing 70%);
 }
 /* Band number menu and buttons */
 #band-number-menu label:before {
@@ -283,21 +284,24 @@ button {
     margin: 0;
     padding: 0;
 
-    .calc-box {
-        padding: 0.1em;
-        border: 5px solid black;
-        min-width: 5em;
-        font-family: 'screenmatrix';
-        font-size: 2rem;
-        line-height: 1;
-        height: 1em;
-
-        background-color: $lcd-screen;
-        color: $lcd-print;
-    }
-
-    .calc-list-entry {
-        display: inline-block;
-        margin:  0 0.25rem;
-    }
+}
+.calc-box {
+    padding: 0.1em;
+    border: 5px solid black;
+    width: 6em;
+    font-family: 'screenmatrix';
+    font-size: 2rem;
+    line-height: 1;
+    height: 1em;
+    color: $lcd-print;
+}
+.calc-box-active {
+  background-color: $lcd-screen-on;
+}
+.calc-box-inactive {
+  background-color: $lcd-screen-off;
+}
+.calc-list-entry {
+    display: inline-block;
+    margin:  0 0.5rem;
 }
