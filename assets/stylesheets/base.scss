@@ -18,11 +18,13 @@ $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
 /* wire and solder */
 $metal: #919791;
-$pcb-green: #0d913d;
+$pcb-green: #15723b;
 $pcb-gold: #d6bc71;
 $red-led-on: #fa1915;
-$red-led-off: #a8343d;
-$pcb-printing: rgba(255, 255, 255, .9);
+$red-led-off: #862930;
+$pcb-printing: rgba(255, 255, 255, .8);
+$lcd-screen: #938c72;
+$lcd-print: #323427;
 @font-face {
     font-family: 'osifont';
     src: url('/assets/fonts/osifont-webfont.woff2') format('woff2'), url('/assets/fonts/osifont-webfont.woff') format('woff');
@@ -30,11 +32,26 @@ $pcb-printing: rgba(255, 255, 255, .9);
     font-style: normal;
 }
 
+font-face {
+    font-family: 'screenmatrix';
+    src: url('/assets/fonts/screenmatrix-webfont.woff2') format('woff2'), url('/assets/fonts/screenmatrix-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     background-color: $pcb-green;
     color: $pcb-printing;
     font-family: 'osifont';
     line-height: 1.5;
+}
+
+h1 {
+  
+  margin: .5rem;
+}
+h2, h3, p {
+  padding: 0;
+  margin: 0;
 }
 
 #resistor-body {
@@ -54,7 +71,8 @@ body {
     width: fit-content;
     color: $pcb-printing;
     border: 2px solid $pcb-printing;
-    padding: 2rem;
+    padding: .5rem;
+    margin: .5rem;
 }
 /* Restyle the radio buttons */
 input[type=radio] {
@@ -78,13 +96,20 @@ label:before {
 }
 
 input[type=radio]:checked + label:before {
-    background-image: radial-gradient(circle, #ffffff 0%, #fefe71 10%, $red-led-on 50%, $pcb-printing 70%);
+    background-image: radial-gradient(circle, #fa8525 0%, $red-led-on 40%, $red-led-on 50%, $pcb-printing 60%);
 }
 /* Band number menu and buttons */
 #band-number-menu label:before {
   top: 2px; /* This moves it down below the border, but I don't know why it overlaps. */
+
 }
 
+#band-number-menu {
+    border: 2px solid $pcb-printing;
+     width: fit-content;
+     padding: .5rem;
+     margin: .5rem;
+}
 .band-number-button {
     border: 2px solid $pcb-printing;
     margin: 0.3rem 0.3em 0.3em 0;
@@ -246,21 +271,33 @@ button {
     color: black;
 }
 /* Calc Box styles */
+
+.calculations {
+  border: 2px solid $pcb-printing;
+  width: fit-content;
+  margin: .5rem;
+  padding: .5rem;
+}
 .calc-boxes {
     list-style: none;
     margin: 0;
     padding: 0;
 
     .calc-box {
-        padding: 0.25em;
-        border: 2px solid black;
+        padding: 0.1em;
+        border: 5px solid black;
         min-width: 5em;
+        font-family: 'screenmatrix';
+        font-size: 2rem;
+        line-height: 1;
         height: 1em;
+
+        background-color: $lcd-screen;
+        color: $lcd-print;
     }
 
     .calc-list-entry {
         display: inline-block;
-        padding: 0.25rem;
-        margin: 0.25rem;
+        margin:  0 0.25rem;
     }
 }

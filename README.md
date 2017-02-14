@@ -27,7 +27,7 @@ The general goal of this app is to start with a "blank" resistor, then allow the
 ### Credits
 * Metallic texture PNG: Eggshell by Paul Phönixweiß via [Transparent Textures](https://www.transparenttextures.com/).
 * PCB printing font: [osifont](https://github.com/hikikomori82/osifont).
-* LCD font: .
+* LCD font: [Screen Matrix](http://www.dafont.com/screenmatrix.font).
 
 
 ##### Pushing just `site` to `gh-pages`

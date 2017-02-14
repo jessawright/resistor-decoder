@@ -14,6 +14,7 @@ class BandNumberMenu extends React.Component {
     })
     return (
       <form id="band-number-menu">
+        <h2>Number of colored bands</h2>
         {bandNumberButtonList}
         <ResetButton onReset={this.props.onReset}/>
       </form>

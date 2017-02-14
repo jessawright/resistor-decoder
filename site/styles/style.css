@@ -6,11 +6,24 @@
   font-weight: normal;
   font-style: normal; }
 
+font-face {
+  font-family: 'screenmatrix';
+  src: url("/assets/fonts/screenmatrix-webfont.woff2") format("woff2"), url("/assets/fonts/screenmatrix-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  background-color: #0d913d;
-  color: rgba(255, 255, 255, 0.9);
+  background-color: #15723b;
+  color: rgba(255, 255, 255, 0.8);
   font-family: 'osifont';
   line-height: 1.5; }
+
+h1 {
+  margin: .5rem; }
+
+h2, h3, p {
+  padding: 0;
+  margin: 0; }
 
 #resistor-body {
   fill: #E8C599; }
@@ -24,9 +37,10 @@ body {
 .container {
   position: relative;
   width: fit-content;
-  color: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  padding: 2rem; }
+  color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: .5rem;
+  margin: .5rem; }
 
 /* Restyle the radio buttons */
 input[type=radio] {
@@ -44,26 +58,32 @@ label:before {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: radial-gradient(circle, #a8343d 0%, #a8343d 50%, rgba(255, 255, 255, 0.9) 50%); }
+  background-image: radial-gradient(circle, #862930 0%, #862930 50%, rgba(255, 255, 255, 0.8) 50%); }
 
 input[type=radio]:checked + label:before {
-  background-image: radial-gradient(circle, #ffffff 0%, #fefe71 10%, #fa1915 50%, rgba(255, 255, 255, 0.9) 70%); }
+  background-image: radial-gradient(circle, #fa8525 0%, #fa1915 40%, #fa1915 50%, rgba(255, 255, 255, 0.8) 60%); }
 
 /* Band number menu and buttons */
 #band-number-menu label:before {
   top: 2px;
   /* This moves it down below the border, but I don't know why it overlaps. */ }
 
+#band-number-menu {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  width: fit-content;
+  padding: .5rem;
+  margin: .5rem; }
+
 .band-number-button {
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   margin: 0.3rem 0.3em 0.3em 0;
   font-size: 1.25rem;
   display: inline-block; }
 
 /* Band color menu and buttons */
 #band-color-menu {
-  background-color: #0d913d;
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  background-color: #15723b;
+  border: 2px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 15px 5px black;
   width: fit-content;
   height: fit-content;
@@ -73,7 +93,7 @@ input[type=radio]:checked + label:before {
   transform: translateY(-50%); }
 
 .band-color-button {
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   margin: 0.5em 0;
   font-size: 1rem; }
 
@@ -184,16 +204,26 @@ button {
   color: black; }
 
 /* Calc Box styles */
+.calculations {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  width: fit-content;
+  margin: .5rem;
+  padding: .5rem; }
+
 .calc-boxes {
   list-style: none;
   margin: 0;
   padding: 0; }
   .calc-boxes .calc-box {
-    padding: 0.25em;
-    border: 2px solid black;
+    padding: 0.1em;
+    border: 5px solid black;
     min-width: 5em;
-    height: 1em; }
+    font-family: 'screenmatrix';
+    font-size: 2rem;
+    line-height: 1;
+    height: 1em;
+    background-color: #938c72;
+    color: #323427; }
   .calc-boxes .calc-list-entry {
     display: inline-block;
-    padding: 0.25rem;
-    margin: 0.25rem; }
+    margin: 0 0.25rem; }

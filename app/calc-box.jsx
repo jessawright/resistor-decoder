@@ -38,7 +38,7 @@ class CalcBox extends React.Component {
     };
 
     return (
-      <li className='calc-list-entry'><p className="calc-label">{this.props.calcLabel} </p> <p className='calc-box' id={id}>{boxContent}</p></li>
+      <li className='calc-list-entry'><h3 className="calc-label">{this.props.calcLabel} </h3> <p className='calc-box' id={id}>{boxContent}</p></li>
     )
   }
 }

@@ -42,7 +42,7 @@ class Calculations extends React.Component {
 
 
     return (
-      <div>
+      <div className="calculations">
         <h2>Resistor Value</h2>
         <ul className='calc-boxes'>
           <CalcBox resistorDecoderInfo={this.props.resistorDecoderInfo} id="digit-box" decodedResistor={decodedResistor} activeBandColors={activeBandColors} calcLabel="Resistance"/>
