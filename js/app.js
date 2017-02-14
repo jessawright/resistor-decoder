@@ -21735,6 +21735,11 @@
 	      return _react2.default.createElement(
 	        "form",
 	        { id: "band-number-menu" },
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          "Number of colored bands"
+	        ),
 	        bandNumberButtonList,
 	        _react2.default.createElement(_resetButton2.default, { onReset: this.props.onReset })
 	      );
@@ -22435,7 +22440,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'calculations' },
 	        _react2.default.createElement(
 	          'h2',
 	          null,
@@ -22530,7 +22535,7 @@
 	        'li',
 	        { className: 'calc-list-entry' },
 	        _react2.default.createElement(
-	          'p',
+	          'h3',
 	          { className: 'calc-label' },
 	          this.props.calcLabel,
 	          ' '
