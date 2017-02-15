@@ -15,20 +15,36 @@ The general goal of this app is to start with a "blank" resistor, then allow the
 * Some resistor decoders have some idealized shape to represent the resistor. While my shape is still somewhat idealized for symmetry, it a vector tracing of a photo of a good-looking resistor.
 * Font choice is informed by what is typically seen on PCBs and LCDs.
 
+---
 
-## Possible enhancements
+### To do
+* Add some responsiveness: widths, font sizes, screen orientation, check how buttons work via touch, etc.
+* Fix cross-browser bugs
+    * Get the screenmatrix ohm symbol to display in Chrome and Firefox.
+    * Make resistor section width/border behave consistently between browsers (Chrome vs. Firefox and Safari).
+    * Find out why radial gradients are so ugly in Firefox and Safari; fix it if possible.
+    * Get patterned resistor bands to display in Firefox.
+    * Test with more browsers/devices (currently Chrome, Firefox, and Safari on OSX).
+* Refactor the six band components into one, using paths passed in as props.
+* Try storing SVG patterns in an external file.
+* Try making a better glitter texture.
+* Make color menu close when clicking anywhere outside the menu.
+* Add accessibility
+    * Make it usable via keyboard control.
+    * Look for other accessibility standards that I can follow.
+    * _At least my colors will match what the color-blind see in real-life, even if they are no more accessible than real-life!_
+
+
+### Possible enhancements
 * Thorough responsiveness.
 * Displaying other information:
     * E series status of the resistor.
     * Range of resistance ( = resistance +/- tolerance).
 * Allowing for reverse calculation (the user enters resistance and the app displays the colored bands from that).
 
+---
 
-### Credits
+#### Credits
 * Metallic texture PNG: Eggshell by Paul Phönixweiß via [Transparent Textures](https://www.transparenttextures.com/).
 * PCB printing font: [osifont](https://github.com/hikikomori82/osifont).
 * LCD font: [Screen Matrix](http://www.dafont.com/screenmatrix.font).
-
-
-##### Pushing just `site` to `gh-pages`
-`git subtree push --prefix site origin gh-pages`
