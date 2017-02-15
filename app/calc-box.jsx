@@ -22,7 +22,7 @@ class CalcBox extends React.Component {
           } else if ((decodedResistor.digits.join('') * decodedResistor['multiplier']) >= 1000) {
             boxContent = ((decodedResistor.digits.join('') * decodedResistor['multiplier']) / 1000) + 'K' + units['multiplier'];
           } else {
-            boxContent = (decodedResistor.digits.join('') * decodedResistor['multiplier']) + ' ' + units['multiplier'];
+            boxContent = (decodedResistor.digits.join('') * decodedResistor['multiplier']) + units['multiplier'];
           };
           break;
         case 'tolerance-box':

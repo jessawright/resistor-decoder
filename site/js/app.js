@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://jessawright.github.io/resistor-decoder/";
+/******/ 	__webpack_require__.p = "/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -22527,7 +22527,7 @@
 	            } else if (decodedResistor.digits.join('') * decodedResistor['multiplier'] >= 1000) {
 	              boxContent = decodedResistor.digits.join('') * decodedResistor['multiplier'] / 1000 + 'K' + units['multiplier'];
 	            } else {
-	              boxContent = decodedResistor.digits.join('') * decodedResistor['multiplier'] + ' ' + units['multiplier'];
+	              boxContent = decodedResistor.digits.join('') * decodedResistor['multiplier'] + units['multiplier'];
 	            };
 	            break;
 	          case 'tolerance-box':
