@@ -21677,7 +21677,7 @@
 	          "div",
 	          null,
 	          _react2.default.createElement(_bandNumberMenu2.default, { bandNumberOptions: this.props.resistorDecoderInfo.bandNumberOptions, selectedBandNumber: this.state.selectedBandNumber, onChange: this.handleBandNumberChange, onReset: this.handleResetClick }),
-	          _react2.default.createElement(_resetButton2.default, { onReset: this.props.onReset })
+	          _react2.default.createElement(_resetButton2.default, { onReset: this.handleResetClick })
 	        ),
 	        _react2.default.createElement(_resistor2.default, { selectedBandNumber: this.state.selectedBandNumber, bandColors: this.state.bandColors, resistorDecoderInfo: this.props.resistorDecoderInfo, onBandClick: this.handleBandClick, bandClicked: this.state.bandClicked, onColorClick: this.handleColorClick }),
 	        _react2.default.createElement(_calculations2.default, { selectedBandNumber: this.state.selectedBandNumber, resistorDecoderInfo: this.props.resistorDecoderInfo, bandColors: this.state.bandColors })
