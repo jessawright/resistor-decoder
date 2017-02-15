@@ -4,23 +4,23 @@ The general goal of this app is to start with a "blank" resistor, then allow the
 
 
 ## Development choices
-* I am using React largely as a way to practice and learn to use React. In the process. I've also learned and practiced using Webpack, several Webpack modules, npm, and SCSS.
-* This has also been a good opportunity to learn SVG. In making this app, I've learned more about creating SVGs using Inkscape and Adobe Illustrator, various methods of optimizing SVGs, and various methods of implementing SVGs.
+* This is written in React because I wanted to learn React by making something.
+* In making this SPA, I have learned a lot about SVG. I've learned about creating SVGs using vector graphics editors (Inkscape and Adobe Illustrator), optimization methods and factors, and implementation methods. I've also learned a lot of SVG syntax and how to manipulate them directly through their code, which is sometimes easier or more sensible than using a vector graphics editor.
+* I also learned and practiced using JSX (I'm a big fan), Webpack, several Webpack modules, npm, and SCSS.
 
 
 ## Design choices
-* Most resistor decoders on the internet use arbitrarily chosen colors on the screen to represent the colors of the bands. I chose my colors based on photos of actual resistors. While there may be (probably?) standardized ideal colors for these paints, they will look different in reality, which is what I am more interested in replicating.
-* Some resistor decoders have some idealized shape to represent the resistor. While my shape is still somewhat idealized, it is based on a tracing of a photo of a resistor.
-* Font choice will be informed by the fonts I see on resistors, in documentation, on electrical diagrams, and on PCBs.
+* Most resistor decoders on the internet use arbitrarily chosen colors on the screen to represent the colors on the resistors. I chose my colors based on photos of actual resistors. While there may be (probably?) standardized ideal colors for these paints, they will look different in reality, which is what I am more interested in mimicking.
+* Beyond that, all other colors are also chosen based their real-life counterparts. These are defined as Sass variables, even where they are used only once, to indicate where the color choice came from (ex. $pcb-green, $wire, $red-led-on).
+* Some resistor decoders have some idealized shape to represent the resistor. While my shape is still somewhat idealized for symmetry, it a vector tracing of a photo of a good-looking resistor.
+* Font choice is informed by what is typically seen on PCBs and LCDs.
 
 
 ## Possible enhancements
 * Thorough responsiveness.
-* Calculations for current input and output based on the calculated resistance.
 * Displaying other information:
-    * Where the calculated resistor is in terms of the E series.
-    * Other units for the resistance.
-    * Other abbreviations for the calculated resistance.
+    * E series status of the resistor.
+    * Range of resistance ( = resistance +/- tolerance).
 * Allowing for reverse calculation (the user enters resistance and the app displays the colored bands from that).
 
 
