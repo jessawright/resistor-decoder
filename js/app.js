@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://127.0.0.1:8080/";
+/******/ 	__webpack_require__.p = "https://jessawright.github.io/resistor-decoder/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
