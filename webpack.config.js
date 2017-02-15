@@ -10,16 +10,17 @@ var webpackSettings = {
  },
  module: {
   loaders: [{
-   test: /\.jsx?$/,
-   exclude: /(node_modules|bower_components)/,
-   loader: 'babel-loader',
-   query: {
-    presets: ['es2015', 'react']
+    test: /\.jsx?$/,
+    exclude: /(node_modules|bower_components)/,
+    loader: 'babel-loader',
+    query: {
+     presets: ['es2015', 'react']
+    }
+   }, {
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract('css!sass')
    }
-  }, {
-   test: /\.scss$/,
-   loader: ExtractTextPlugin.extract('css!sass')
-  }]
+  ]
 
  },
  plugins: [
