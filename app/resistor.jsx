@@ -24,7 +24,7 @@ class Resistor extends React.Component {
               <rect x="0" y="0" width="8" height="8" fill="#555"/>
               <rect x="0" y="0" width="4" height="8" stroke="none" fill="#222"/>
             </pattern>
-            <image id="glitter-texture" xlinkHref='../assets/images/egg-shell.png' x="0" y="0" width="256" height="256"/>
+            <image id="glitter-texture" xlinkHref='../resistor-decoder/assets/images/egg-shell.png' x="0" y="0" width="256" height="256"/>
             <pattern id="gold-glitter" patternUnits="userSpaceOnUse" width="256" height="256">
               <rect width="256" height="256" fill="#CBA254"/>
               <use xlinkHref="#glitter-texture"/>

@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'osifont';
-  src: url(/resistor-decoder/assets/fonts/osifont-webfont.woff2) format("woff2"), url(/resistor-decoder/assets/fonts/osifont-webfont.woff) format("woff");
+  src: url(https://jessawright.github.io/resistor-decoder/assets/fonts/osifont-webfont.woff2) format("woff2"), url(https://jessawright.github.io/resistor-decoder/assets/fonts/osifont-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'screenmatrix';
-  src: url(/resistor-decoder/assets/fonts/screenmatrix-webfont.woff2) format("woff2"), url(/resistor-decoder/assets/fonts/screenmatrix-webfont.woff) format("woff");
+  src: url(https://jessawright.github.io/resistor-decoder/assets/fonts/screenmatrix-webfont.woff2) format("woff2"), url(https://jessawright.github.io/resistor-decoder/assets/fonts/screenmatrix-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -236,10 +236,10 @@ input[type=radio]:checked + label:before {
   color: black; }
 
 .gold-label {
-  background: url(/resistor-decoder/assets/images/egg-shell.png) #CBA254; }
+  background: url(https://jessawright.github.io/resistor-decoder/assets/images/egg-shell.png) #CBA254; }
 
 .silver-label {
-  background: url(/resistor-decoder/assets/images/egg-shell.png) #A8AAAD;
+  background: url(https://jessawright.github.io/resistor-decoder/assets/images/egg-shell.png) #A8AAAD;
   color: black; }
 
 body {
