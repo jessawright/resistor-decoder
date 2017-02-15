@@ -73,7 +73,7 @@ class Decoder extends React.Component {
         <h1 className='title'>RESISTOR COLOR DECODER</h1>
         <div>
           <BandNumberMenu bandNumberOptions={this.props.resistorDecoderInfo.bandNumberOptions} selectedBandNumber={this.state.selectedBandNumber} onChange={this.handleBandNumberChange} onReset={this.handleResetClick}/>
-          <ResetButton onReset={this.props.onReset}/>
+          <ResetButton onReset={this.handleResetClick}/>
         </div>
         <Resistor selectedBandNumber={this.state.selectedBandNumber} bandColors={this.state.bandColors} resistorDecoderInfo={this.props.resistorDecoderInfo} onBandClick={this.handleBandClick} bandClicked={this.state.bandClicked} onColorClick={this.handleColorClick}/>
         <Calculations selectedBandNumber={this.state.selectedBandNumber} resistorDecoderInfo={this.props.resistorDecoderInfo} bandColors={this.state.bandColors}/>
