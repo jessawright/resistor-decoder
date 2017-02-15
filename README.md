@@ -36,7 +36,6 @@ The general goal of this app is to start with a "blank" resistor, then allow the
 
 
 ### Possible enhancements
-* Thorough responsiveness.
 * Displaying other information:
     * E series status of the resistor.
     * Range of resistance ( = resistance +/- tolerance).
