@@ -132,7 +132,7 @@
 
 	  },
 	  units: {
-	    'multiplier': 'Ω', /* html entity for ohm */
+	    'multiplier': 'Ω',
 	    'tolerance': '%',
 	    'tempCoefficient': 'ppm/°C'
 	  }
@@ -21956,7 +21956,7 @@
 	              _react2.default.createElement("rect", { x: "0", y: "0", width: "8", height: "8", fill: "#555" }),
 	              _react2.default.createElement("rect", { x: "0", y: "0", width: "4", height: "8", stroke: "none", fill: "#222" })
 	            ),
-	            _react2.default.createElement("image", { id: "glitter-texture", xlinkHref: "/assets/images/egg-shell.png", x: "0", y: "0", width: "256", height: "256" }),
+	            _react2.default.createElement("image", { id: "glitter-texture", xlinkHref: "/egg-shell.png", x: "0", y: "0", width: "256", height: "256" }),
 	            _react2.default.createElement(
 	              "pattern",
 	              { id: "gold-glitter", patternUnits: "userSpaceOnUse", width: "256", height: "256" },

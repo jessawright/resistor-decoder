@@ -9,7 +9,7 @@
     "compile": "webpack --watch",
     "build": "webpack",
     "dev": "webpack-dev-server --content-base ./site",
-    "deploy": "gh-pages -d build"
+    "deploy": "git subtree push --prefix site origin gh-pages"
   },
   "author": "Jessa Wright",
   "license": "ISC",

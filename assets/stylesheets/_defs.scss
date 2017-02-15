@@ -30,14 +30,14 @@ $lcd-print: #464646;
 
 @font-face {
     font-family: 'osifont';
-    src: url('/assets/fonts/osifont-webfont.woff2') format('woff2'), url('/assets/fonts/osifont-webfont.woff') format('woff');
+    src: url('/osifont-webfont.woff2') format('woff2'), url('/osifont-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 font-face {
     font-family: 'screenmatrix';
-    src: url('/assets/fonts/screenmatrix-webfont.woff2') format('woff2'), url('/assets/fonts/screenmatrix-webfont.woff') format('woff');
+    src: url('/screenmatrix-webfont.woff2') format('woff2'), url('/screenmatrix-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
