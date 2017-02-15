@@ -1,4 +1,4 @@
-/* Resistor colors taken from resistor photos */
+
 $blank-band: url("#blank-band");
 $black-band: #161619;
 $brown-band: #4C231F;
@@ -16,7 +16,6 @@ $tan-body: #E8C599;
 $dark-green-body: #2E645A;
 $light-green-body: #7DC0A6;
 $light-blue-body: #74C0D6;
-/* wire and solder */
 $metal: #919791;
 $pcb-green: #15723b;
 $pcb-light-green: #478c38;
@@ -35,7 +34,7 @@ $lcd-print: #464646;
     font-style: normal;
 }
 
-font-face {
+@font-face {
     font-family: 'screenmatrix';
     src: url('../assets/fonts/screenmatrix-webfont.woff2') format('woff2'), url('../assets/fonts/screenmatrix-webfont.woff') format('woff');
     font-weight: normal;

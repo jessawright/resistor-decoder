@@ -1,12 +1,10 @@
-/* Resistor colors taken from resistor photos */
-/* wire and solder */
 @font-face {
   font-family: 'osifont';
   src: url(https://jessawright.github.io/resistor-decoder/assets/fonts/osifont-webfont.woff2) format("woff2"), url(https://jessawright.github.io/resistor-decoder/assets/fonts/osifont-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
-font-face {
+@font-face {
   font-family: 'screenmatrix';
   src: url(https://jessawright.github.io/resistor-decoder/assets/fonts/screenmatrix-webfont.woff2) format("woff2"), url(https://jessawright.github.io/resistor-decoder/assets/fonts/screenmatrix-webfont.woff) format("woff");
   font-weight: normal;
@@ -165,7 +163,6 @@ input[type=radio]:checked + label:before {
 .calc-box-inactive {
   background-color: #59755e; }
 
-/* Band color menu and buttons */
 #band-color-menu {
   background-color: #15723b;
   border: 2px solid rgba(255, 255, 255, 0.8);
@@ -206,7 +203,6 @@ input[type=radio]:checked + label:before {
 .color-menu-options {
   display: block; }
 
-/* Indicate that these are clickable */
 .black-label {
   background-color: #161619; }
 
