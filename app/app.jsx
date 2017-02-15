@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import Decoder from './decoder.jsx';
-require('../assets/stylesheets/base.scss');
+require('./stylesheets/base.scss');
 
 const resistorDecoderInfo = {
   bandNumberOptions: ['4', '5', '6'],
@@ -73,7 +73,7 @@ const resistorDecoderInfo = {
 
   },
   units: {
-    'multiplier': 'Ω', 
+    'multiplier': 'Ω',
     'tolerance': '%',
     'tempCoefficient': 'ppm/°C'
   }

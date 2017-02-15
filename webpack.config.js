@@ -4,9 +4,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpackSettings = {
  entry: './app/app.jsx',
  output: {
-  publicPath: 'https://jessawright.github.io/resistor-decoder/',
-  path: './site/js',
-  filename: 'app.js'
+  publicPath: 'http://127.0.0.1:8080/',
+  path: './site',
+  filename: '/js/app.js'
  },
  module: {
   loaders: [{
@@ -19,12 +19,20 @@ var webpackSettings = {
    }, {
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract('css!sass')
+   },
+   {
+    test: /\.(eot|svg|ttf|woff|woff2)$/,
+    loader: 'file?name=assets/fonts/[name].[ext]'
+   },
+   {
+    test: /\.(jpe?g|png|gif|svg|ico)$/i,
+    loader: 'file?name=assets/images/[name].[ext]'
    }
   ]
 
  },
  plugins: [
-  new ExtractTextPlugin('../styles/style.css', {
+  new ExtractTextPlugin('styles/style.css', {
    allChunks: true
   })
  ]

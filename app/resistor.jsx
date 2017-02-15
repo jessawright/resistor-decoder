@@ -7,10 +7,9 @@ import Band4 from './band-4.jsx';
 import Band5 from './band-5.jsx';
 import Band6 from './band-6.jsx';
 import BandColorMenu from './band-color-menu.jsx';
-import eggShell from './../assets/images/egg-shell.png';
 
 
-class ResistorTrial extends React.Component {
+class Resistor extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -25,7 +24,7 @@ class ResistorTrial extends React.Component {
               <rect x="0" y="0" width="8" height="8" fill="#555"/>
               <rect x="0" y="0" width="4" height="8" stroke="none" fill="#222"/>
             </pattern>
-            <image id="glitter-texture" xlinkHref={eggShell} x="0" y="0" width="256" height="256"/>
+            <image id="glitter-texture" xlinkHref='../assets/images/egg-shell.png' x="0" y="0" width="256" height="256"/>
             <pattern id="gold-glitter" patternUnits="userSpaceOnUse" width="256" height="256">
               <rect width="256" height="256" fill="#CBA254"/>
               <use xlinkHref="#glitter-texture"/>
@@ -70,4 +69,4 @@ class ResistorTrial extends React.Component {
   }
 }
 
-export default ResistorTrial
+export default Resistor

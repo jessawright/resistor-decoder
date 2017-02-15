@@ -2,13 +2,13 @@
 /* wire and solder */
 @font-face {
   font-family: 'osifont';
-  src: url("/assets/fonts/osifont-webfont.woff2") format("woff2"), url("/assets/fonts/osifont-webfont.woff") format("woff");
+  src: url(http://127.0.0.1:8080/assets/fonts/osifont-webfont.woff2) format("woff2"), url(http://127.0.0.1:8080/assets/fonts/osifont-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
 font-face {
   font-family: 'screenmatrix';
-  src: url("/assets/fonts/screenmatrix-webfont.woff2") format("woff2"), url("/assets/fonts/screenmatrix-webfont.woff") format("woff");
+  src: url(http://127.0.0.1:8080/assets/fonts/screenmatrix-webfont.woff2) format("woff2"), url(http://127.0.0.1:8080/assets/fonts/screenmatrix-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -240,10 +240,10 @@ input[type=radio]:checked + label:before {
   color: black; }
 
 .gold-label {
-  background: url(https://jessawright.github.io/resistor-decoder/assets/images/egg-shell-75a7a84a76f0b6679b46fc53ab761149.png) #CBA254; }
+  background: url(http://127.0.0.1:8080/assets/images/egg-shell.png) #CBA254; }
 
 .silver-label {
-  background: url(https://jessawright.github.io/resistor-decoder/assets/images/egg-shell-75a7a84a76f0b6679b46fc53ab761149.png) #A8AAAD;
+  background: url(http://127.0.0.1:8080/assets/images/egg-shell.png) #A8AAAD;
   color: black; }
 
 body {
