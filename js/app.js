@@ -60,7 +60,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(192);
+	__webpack_require__(193);
 
 	var resistorDecoderInfo = {
 	  bandNumberOptions: ['4', '5', '6'],
@@ -21579,7 +21579,7 @@
 
 	var _resistor2 = _interopRequireDefault(_resistor);
 
-	var _calculations = __webpack_require__(190);
+	var _calculations = __webpack_require__(191);
 
 	var _calculations2 = _interopRequireDefault(_calculations);
 
@@ -21916,6 +21916,10 @@
 
 	var _bandColorMenu2 = _interopRequireDefault(_bandColorMenu);
 
+	var _eggShell = __webpack_require__(190);
+
+	var _eggShell2 = _interopRequireDefault(_eggShell);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21956,7 +21960,7 @@
 	              _react2.default.createElement("rect", { x: "0", y: "0", width: "8", height: "8", fill: "#555" }),
 	              _react2.default.createElement("rect", { x: "0", y: "0", width: "4", height: "8", stroke: "none", fill: "#222" })
 	            ),
-	            _react2.default.createElement("image", { id: "glitter-texture", xlinkHref: "/egg-shell.png", x: "0", y: "0", width: "256", height: "256" }),
+	            _react2.default.createElement("image", { id: "glitter-texture", xlinkHref: _eggShell2.default, x: "0", y: "0", width: "256", height: "256" }),
 	            _react2.default.createElement(
 	              "pattern",
 	              { id: "gold-glitter", patternUnits: "userSpaceOnUse", width: "256", height: "256" },
@@ -22378,6 +22382,12 @@
 /* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "assets/images/egg-shell-75a7a84a76f0b6679b46fc53ab761149.png";
+
+/***/ },
+/* 191 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -22394,7 +22404,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _calcBox = __webpack_require__(191);
+	var _calcBox = __webpack_require__(192);
 
 	var _calcBox2 = _interopRequireDefault(_calcBox);
 
@@ -22474,7 +22484,7 @@
 	exports.default = Calculations;
 
 /***/ },
-/* 191 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22570,7 +22580,7 @@
 	exports.default = CalcBox;
 
 /***/ },
-/* 192 */
+/* 193 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
