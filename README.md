@@ -18,6 +18,7 @@ The general goal of this app is to start with a "blank" resistor, then allow the
 ---
 
 ### To do
+* Add byline, link to github, copyright, etc.
 * Add some responsiveness: widths, font sizes, screen orientation, check how buttons work via touch, etc.
 * Fix cross-browser bugs
     * Get the screenmatrix ohm symbol to display in Chrome and Firefox.
